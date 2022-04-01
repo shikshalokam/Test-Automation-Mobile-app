@@ -1,0 +1,19 @@
+2022-03-31 09:55:55:694 [Appium] Welcome to Appium v1.20.2
+2022-03-31 09:55:55:696 [Appium] Non-default server args:
+2022-03-31 09:55:55:697 [Appium]   address: 127.0.0.1
+2022-03-31 09:55:55:698 [Appium]   port: 43721
+2022-03-31 09:55:55:699 [Appium]   logFile: /home/qualitrix/Documents/SikshaLokam/Framework/Mobile/sk-automation/logs/appium.log
+2022-03-31 09:55:55:724 [Appium] Appium REST http interface listener started on 127.0.0.1:43721
+2022-03-31 09:55:55:877 [HTTP] --> GET /wd/hub/status
+2022-03-31 09:55:55:878 [HTTP] {}
+2022-03-31 09:55:55:881 [GENERIC] Calling AppiumDriver.getStatus() with args: []
+2022-03-31 09:55:55:883 [GENERIC] Responding to client with driver.getStatus() result: {"build":{"version":"1.20.2"}}
+2022-03-31 09:55:55:890 [HTTP] <-- GET /wd/hub/status 200 12 ms - 68
+2022-03-31 09:55:55:891 [HTTP] 
+2022-03-31 09:55:55:896 [HTTP] --> GET /wd/hub/status
+2022-03-31 09:55:55:897 [HTTP] {}
+2022-03-31 09:55:55:897 [GENERIC] Calling AppiumDriver.getStatus() with args: []
+2022-03-31 09:55:55:898 [GENERIC] Responding to client with driver.getStatus() result: {"build":{"version":"1.20.2"}}
+2022-03-31 09:55:55:899 [HTTP] <-- GET /wd/hub/status 200 2 ms - 68
+2022-03-31 09:55:55:899 [HTTP] 
+2022-03-31 09:55:56:548 [Appium] Received SIGINT - shutting down

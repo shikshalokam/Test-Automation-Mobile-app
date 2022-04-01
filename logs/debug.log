@@ -1,0 +1,25 @@
+Thu Mar 31 15:25:54 IST 2022 INFO TestListeners-onStart-78 *********************onStart********************* mode null
+Thu Mar 31 15:25:54 IST 2022 INFO GlobalSession-get-23 On GetAppiumManger Global
+Thu Mar 31 15:25:54 IST 2022 INFO GlobalSession-setAppiumManager-32 SetAppiumManager Global
+Thu Mar 31 15:25:54 IST 2022 INFO TestListeners-onStart-86 Running in local
+Thu Mar 31 15:25:54 IST 2022 INFO AppiumManagerUtils-getAppiumJSPath-122 actualJSPath :/home/qualitrix/Documents/WebDriverIo/node-v14.15.0-linux-x64/bin/appium
+Thu Mar 31 15:25:54 IST 2022 INFO AppiumManagerUtils-getNodePath-74 nodePath :/home/qualitrix/Documents/WebDriverIo/node-v14.15.0-linux-x64/bin/node
+Thu Mar 31 15:25:55 IST 2022 INFO AppiumManager-startServer-84 Appium Server Started
+Thu Mar 31 15:25:55 IST 2022 INFO AppiumManager-startServer-87 Endpoint http://127.0.0.1:43721/wd/hub
+Thu Mar 31 15:25:55 IST 2022 INFO AppiumManager-startServer-88 **************************************************************
+Thu Mar 31 15:25:55 IST 2022 INFO AppiumManager-startServer-89 $$$$$$$$$$$$$$$$$$$$$ APPIUM SERVER STARTED $$$$$$$$$$$$$$$$$$
+Thu Mar 31 15:25:55 IST 2022 INFO AppiumManager-startServer-90 **************************************************************
+Thu Mar 31 15:25:55 IST 2022 INFO ExtentTestManager-InitReport-23 On InitReports
+Thu Mar 31 15:25:55 IST 2022 INFO ExtentManager-getExtent-23 On GetExtent
+Thu Mar 31 15:25:56 IST 2022 INFO TestListeners-onTestStart-34 ObservationLinkTest
+Thu Mar 31 15:25:56 IST 2022 INFO TestListeners-onTestStart-35 *********************onTestStart********************* verifyObservationTab_27
+Thu Mar 31 15:25:56 IST 2022 INFO GlobalSession-get-23 On GetAppiumManger Global
+Thu Mar 31 15:25:56 IST 2022 INFO AppiumManager-createDriver-50 On Create Driver...
+Thu Mar 31 15:25:56 IST 2022 INFO AppiumManager-setLocalCapabilities-122 On setLocalCapabilities
+Thu Mar 31 15:25:56 IST 2022 INFO AppiumManager-setLocalCapabilities-136 Running in Linux
+Thu Mar 31 15:25:56 IST 2022 INFO AppiumManager-setLocalCapabilities-138 *************** Desired Capabilities ******************:
+Thu Mar 31 15:25:56 IST 2022 INFO AppiumManager-setLocalCapabilities-139 Capabilities {appActivity: com.google.android.apps.chr..., appPackage: com.android.chrome, autoGrantPermissions: true, automationName: UIAutomator2, deviceName: emulator-5554, launchTimeout: 90000, newCommandTimeout: 9000, platformName: Android, platformVersion: 11}
+Thu Mar 31 15:25:56 IST 2022 INFO AppiumManager-setLocalCapabilities-140 *************** Desired Capabilities ******************:
+Thu Mar 31 15:25:56 IST 2022 INFO AppiumManager-setDriver-101 selected Mode On SetDriverlocal
+Thu Mar 31 15:25:56 IST 2022 INFO AppiumManager-setDriver-102 ***********************Running in LOCAL*****************************
+Thu Mar 31 15:25:56 IST 2022 INFO AppiumManager-setDriver-103 endpoint http://127.0.0.1:43721/wd/hub

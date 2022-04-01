@@ -1,0 +1,11 @@
+Thu Mar 24 16:50:13 IST 2022 INFO Gestures-click-86 Method: click for locator = Located by By.id: com.android.chrome:id/search_box_text status = true
+Thu Mar 24 16:50:20 IST 2022 INFO Logger-logAndReportInfo-95 Entered URL https://preprod.ntp.net.in/manage-learn/create-observation/2ba0cdc1284729331d296bf3ad118f5a
+Thu Mar 24 16:50:24 IST 2022 INFO Gestures-click-86 Method: click for locator = Located by By.xpath:  //android.view.View[@content-desc="Start Observation"]/android.widget.Button status = true
+Thu Mar 24 16:50:24 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on Start observation 
+Thu Mar 24 16:50:29 IST 2022 INFO Gestures-click-86 Method: click for locator = Located by By.xpath: (//android.widget.TextView)[4]  status = true
+Thu Mar 24 16:50:29 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the first entity from list 
+Thu Mar 24 16:50:31 IST 2022 INFO Gestures-click-86 Method: click for locator = Located by By.xpath: //android.widget.TextView[@text="Observation 1"] status = true
+Thu Mar 24 16:50:31 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on Observation 1
+Thu Mar 24 16:50:33 IST 2022 INFO Gestures-click-86 Method: click for locator = Located by By.xpath: (//android.view.View//android.view.View)[15] status = true
+Thu Mar 24 16:50:34 IST 2022 INFO Gestures-click-86 Method: click for locator = Located by By.xpath: (//android.view.View//android.view.View)[19] status = true
+Thu Mar 24 16:50:34 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on First Domain

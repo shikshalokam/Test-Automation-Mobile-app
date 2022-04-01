@@ -1,0 +1,31 @@
+[
+  {
+    "name": "local",
+    "caps": {
+      "platformName": "Android",
+      "deviceName": "329943c9",
+      "platformVersion": "11",
+      "automationName": "UIAutomator2",
+      "appPackage": "preprod.diksha.app",
+      "appActivity": "org.sunbird.app.MainActivity",
+      "newCommandTimeout": "9000",
+      "autoGrantPermissions": "true",
+      "launchTimeout": "90000"
+    }
+  },
+
+  {
+    "name": "chrome",
+    "caps": {
+      "platformName": "Android",
+      "deviceName": "emulator-5554",
+      "platformVersion": "11",
+      "automationName": "UIAutomator2",
+      "appPackage": "com.android.chrome",
+      "appActivity": "com.google.android.apps.chrome.Main",
+      "newCommandTimeout": "9000",
+      "autoGrantPermissions": "true",
+      "launchTimeout": "90000"
+    }
+  }
+]
