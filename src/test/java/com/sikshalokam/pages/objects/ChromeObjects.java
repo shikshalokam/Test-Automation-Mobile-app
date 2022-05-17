@@ -11,5 +11,9 @@ public class ChromeObjects {
 
     @FindBy(xpath = " //android.view.View[@content-desc=\"Start Observation\"]/android.widget.Button")
     public MobileElement startObservation;
+
+    @FindBy(xpath = " //android.view.View[@content-desc=\"Start project\"]/android.widget.Button")
+    public MobileElement startProject;
+    
     
 }
