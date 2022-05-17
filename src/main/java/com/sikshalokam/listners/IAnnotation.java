@@ -18,7 +18,7 @@ public class IAnnotation implements IAnnotationTransformer {
 	public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
 		try {
 			if (testName == null) {
-				testName = TestData.getFullGoogleSheetValuesAsArrayList("TestCases!D:E");
+				testName = TestData.getFullGoogleSheetValuesAsArrayList("TestCases!A:B");
 				System.out.println("tesName " + testName.toString());
 			}
 			if (containsString(testMethod.getName(), testName)) {

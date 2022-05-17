@@ -273,5 +273,8 @@ public class ObservationPageObjects {
     @FindBy(xpath = "(//android.view.View[contains(@text,'2')]//following::android.widget.EditText)[1]")
     public MobileElement yesRadioButtonForQuestion3;
 
-
+    //sqaa observation for not applicable testcase and search
+    @FindBy(xpath = "(//android.widget.TextView[contains(@text,'Sqaa- For Testing')])[1]")
+    public MobileElement searchedObservation;
+    
 }

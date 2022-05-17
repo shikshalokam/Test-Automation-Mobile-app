@@ -3,7 +3,9 @@ package com.sikshalokam.test;
 import com.sikshalokam.annotation.Author;
 import com.sikshalokam.client.SikshaLokamClient;
 import com.sikshalokam.pages.actions.ChromeActions;
+import com.sikshalokam.pages.actions.HomePageActions;
 import com.sikshalokam.pages.actions.ObservationPageActions;
+import com.sikshalokam.pages.actions.ProjectPageActions;
 import com.sikshalokam.utils.gSheet.TestData;
 import org.testng.annotations.Test;
 
@@ -23,7 +25,14 @@ public class ObservationLinkTest {
         return new ObservationPageActions();
     }
 
-
+    public ProjectPageActions getProjectPageActions() throws Exception {
+    	return new ProjectPageActions();
+    }
+    
+    public HomePageActions getHomePageActions() throws Exception {
+    	return new HomePageActions();
+    }
+    
     @Test(description = "Verify Observation link from chrome ")
     @Author(name = "Sunil H N")
     public void verifyObservationTab() throws Exception {
@@ -111,6 +120,25 @@ public class ObservationLinkTest {
         getObservationPageActions().scrollTowithoutRubricEntity();
         SikshaLokamClient.get().getScreenShot().screenshot();*/
 
-
+    //below is project tile related testcase 
+    @Test(description = "download and delete assigned project ")
+    @Author(name = "Manjunatha K")
+    public void downloadAndDeleteProject() throws Exception {
+        observationLinkTestData = TestData.getFullGoogleSheetDataAsMapString("ObservationLink!A:B");
+        getObservationPageActions().clickOnAcceptButton();
+        getChromeActions().enterUrl(observationLinkTestData.get("assignedProjectLink"));
+        getChromeActions().clickOnStartProject();
+        //getProjectPageActions().clickOnStartImprovement();
+        getProjectPageActions().clickOnProjectDownloadButton();
+        getProjectPageActions().verifyIsProjectDownloaded();
+        getObservationPageActions().clickOnTopBackButton(); // from project detail page
+        getObservationPageActions().clickOnTopBackButton(); // from list of project page
+        getHomePageActions().clickOnDownloadIcon();
+        getHomePageActions().verifyDownloadsPage();
+        getHomePageActions().clickOnDeleteDownloadedProject();
+        getHomePageActions().clickOnDeleteOnPopup();
+        getHomePageActions().verifyNoDownloadsYet();
+        
+    }
 
 }

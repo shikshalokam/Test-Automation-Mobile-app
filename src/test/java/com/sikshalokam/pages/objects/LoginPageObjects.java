@@ -14,7 +14,8 @@ public class LoginPageObjects {
     @FindBy(xpath="//android.widget.Button[contains(@text,'Continue')]")
     public MobileElement continueButton;
 
-    @FindBy(xpath="//android.widget.Button[contains(@text,'Head Teacher & Officials')]")
+    @FindBy(xpath="//android.widget.Button[contains(@text,'HT & Officials')]")
+    // previously it was Head Teacher & Officials
     public MobileElement headTeacherOption;
 
     @FindBy(xpath="//android.widget.Button[contains(@text,'Login with DIKSHA')]")

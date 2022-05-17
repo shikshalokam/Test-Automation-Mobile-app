@@ -7,6 +7,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.SupportsNetworkStateManagement;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.By;
@@ -225,7 +226,7 @@ public class Gestures {
         try {
             int count = Integer.parseInt(scrollCount);
             for (int i = 0; i < count; i++) {
-                if (isElementPresent(element)) {
+                if (!isElementPresent(element)) {
                     break;
                 } else {
                     swipeUp();
@@ -393,6 +394,24 @@ public class Gestures {
             System.out.println("Hide KeyBoard");
         } catch (Exception e) {
             System.out.println("KeyBoard not found to hide");
+        }
+    }
+    
+    public void turnOffMobileData() {
+    	try {
+            ((SupportsNetworkStateManagement) driver).toggleWifi();
+            System.out.println("Turned Off MobileData");
+        } catch (Exception e) {
+            System.out.println("Unable to TurnOff MobileData");
+        }
+    }
+    
+    public void turnOnMobileData() {
+    	try {
+            ((SupportsNetworkStateManagement) driver).toggleWifi();
+            System.out.println("Turned On MobileData");
+        } catch (Exception e) {
+            System.out.println("Unable to TurnOn MobileData");
         }
     }
 }

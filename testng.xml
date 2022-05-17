@@ -10,8 +10,12 @@
 		<classes>
 <!--
 			<class name="com.sikshalokam.test.LoginPageTest"/>
--->
 			<class name="com.sikshalokam.test.ObservationLinkTest"/>
+			<class name="com.sikshalokam.test.ObservationPageTest"/>
+			<class name="com.sikshalokam.test.ProjectPageTest"/>
+-->
+			<class name="com.sikshalokam.test.ProjectPageTestOffline"/>
+			
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

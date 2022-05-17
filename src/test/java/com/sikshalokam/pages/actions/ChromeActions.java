@@ -30,8 +30,12 @@ public class ChromeActions {
         SikshaLokamClient.get().gestures().click(chromeObjects.startObservation);
         Logger.logAndReportInfo("Clicked on Start observation ");
         Thread.sleep(5000);
-
-
     }
 
+    public void clickOnStartProject() throws Exception {
+    	Thread.sleep(2000);
+    	SikshaLokamClient.get().gestures().click(chromeObjects.startProject);
+    	Logger.logAndReportInfo("Clicked on the start project. ");
+    	Thread.sleep(2000);
+    }
 }

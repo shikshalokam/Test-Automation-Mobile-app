@@ -52,6 +52,10 @@ public class Asserts {
         Assert.assertEquals(actual, expected, msg);
     }
 
+    public void assertEqualsIgnoreCase(String actual, String expected, String msg) {
+    	Assert.assertEquals(actual.equalsIgnoreCase(actual), expected.equalsIgnoreCase(expected),msg);
+    }
+    
     public void assertNotEquals(String actual, String expected, String msg) {
         Assert.assertNotEquals(actual, expected, msg);
     }

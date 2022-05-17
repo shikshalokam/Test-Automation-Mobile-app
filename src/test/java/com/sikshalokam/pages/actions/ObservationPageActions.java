@@ -91,6 +91,12 @@ public class ObservationPageActions {
         Logger.logAndReportInfo("Clicked on the first Observation Submission");
     }
 
+    public void sendObservationNameToSearch(String observationName) throws Exception {
+    	SikshaLokamClient.get().gestures().sendValueToTextBox(observationPageObjects.search, observationName);
+    	Logger.logAndReportInfo("Observation name entered is :" + observationName);
+    }
+    
+    
     // *****************************  Verify *****************************************//
     public void verifyObservationTxt() throws Exception {
         SikshaLokamClient.get().getAsserts().assertEquals(observationPageObjects.observationTxt.getText(), "Observation", "Observation Txt not Matched");
@@ -310,6 +316,16 @@ public class ObservationPageActions {
         //SikshaLokamClient.get().gestures().ScrollTo(observationPageObjects.entityObservataionWithoutRubric.getText());
         Thread.sleep(10000);
         Logger.logAndReportInfo("Scroll to without rubric entity");
+    }
+    
+    public void verifySearchedObservation(String observationNameSearched) throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(observationPageObjects.searchedObservation);
+    	Logger.logAndReportPass("Searched observation is displayed succesfully");
+    	String actualObservationName = SikshaLokamClient.get().gestures().getText(observationPageObjects.searchedObservation);
+    	SikshaLokamClient.get().getAsserts().assertEquals(actualObservationName, observationNameSearched,
+    				"Searched observation is not matching.");
+    	System.out.println(actualObservationName);
+   		Logger.logAndReportPass("Enter full name title is matched.");
     }
 }
 

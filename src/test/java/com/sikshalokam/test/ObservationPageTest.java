@@ -19,6 +19,7 @@ import java.util.Map;
 public class ObservationPageTest {
 
     Map<String, String> loginPageTestData;
+    Map<String, String> observationPageTestData;
 
     public LoginPageAction getLoginPageActions() throws Exception {
         return new LoginPageAction();
@@ -85,7 +86,7 @@ public class ObservationPageTest {
         getLoginPageActions().enterUserName(loginPageTestData.get("userName"));
         getLoginPageActions().enterPassword(loginPageTestData.get("password"));
         getLoginPageActions().clickOnLoginButton();
-        getLoginPageActions().clickOnLoginButton();
+       // getLoginPageActions().clickOnLoginButton();
         getObservationPageActions().clickOnObservationTab();
         getObservationPageActions().verifyObservationTxt();
 
@@ -93,4 +94,22 @@ public class ObservationPageTest {
 
 
 
+    //TC_31,32,33
+    @Test(description = "Search Observation via keyword and check not applicable option")
+    @Author(name = "Manjunatha K")
+    public void verifySearchingObservationviaKeywords() throws Exception {
+        loginPageTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTest!A:B");
+        observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
+        getLoginPageActions().clickOnEnglish();
+        getLoginPageActions().clickOnContinue();
+        getLoginPageActions().clickOnHeadTeacherOption();
+        getLoginPageActions().clickOnLoginWithDikshaOption();
+        getLoginPageActions().enterUserName(loginPageTestData.get("userName"));
+        getLoginPageActions().enterPassword(loginPageTestData.get("password"));
+        getLoginPageActions().clickOnLoginButton();
+        getObservationPageActions().clickOnObservationTab();
+        getObservationPageActions().sendObservationNameToSearch(observationPageTestData.get("observationNameToSearch"));
+        getObservationPageActions().verifySearchedObservation(observationPageTestData.get("observationNameToSearch"));
+
+    }
 }
