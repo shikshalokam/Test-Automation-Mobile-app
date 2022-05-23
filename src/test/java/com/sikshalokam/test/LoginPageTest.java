@@ -34,6 +34,21 @@ public class LoginPageTest {
 
     }
 
+    @Test(description = "login to application")
+    @Author(name = "Manjunath Kumar")
+    public void loginToApplicationAsTeacherPerson() throws Exception {
+        loginPageTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTest!A:B");
+        getLoginPageActions().clickOnEnglish();
+        getLoginPageActions().clickOnContinue();
+        getLoginPageActions().clickOnTeacherOption();
+        getLoginPageActions().clickOnLoginWithDikshaOption();
+        getLoginPageActions().enterUserName(loginPageTestData.get("userName"));
+        getLoginPageActions().enterPassword(loginPageTestData.get("password"));
+        getLoginPageActions().clickOnLoginButton();
+        getLoginPageActions().verifyHomePage();
+
+    }
+    
     @Test(description = "login to application with invalid Credentials")
     @Author(name = "Sunil H N")
     public void InvalidCredentialsLogin() throws Exception {
@@ -45,7 +60,7 @@ public class LoginPageTest {
         getLoginPageActions().enterUserName(loginPageTestData.get("userName"));
         getLoginPageActions().enterPassword(loginPageTestData.get("InValidPassword"));
         getLoginPageActions().clickOnLoginButton();
-        getLoginPageActions().verifyHomePage();
+        getLoginPageActions().verifyLoginFailedErrorMsg();
 
     }
 
@@ -61,8 +76,7 @@ public class LoginPageTest {
         getLoginPageActions().enterUserName(loginPageTestData.get("userName"));
         getLoginPageActions().enterPassword(loginPageTestData.get("InValidPassword"));
         getLoginPageActions().clickOnLoginButton();
-        Thread.sleep(3000);
-        getLoginPageActions().verifyHomePage();
+        getLoginPageActions().verifyLoginFailedErrorMsg();
 
 
     }
@@ -84,6 +98,7 @@ public class LoginPageTest {
         getLoginPageActions().enterNameForRegister(nameForCredential); //if name should be unique - need to add random alphabets or numbers
         mobileNumber = loginPageTestData.get("randomMobileNo") + RandomStringUtils.randomNumeric(5);
         getLoginPageActions().enterMobileNumberForRegister(mobileNumber);
+        getLoginPageActions().swipeUpToConfirmPassword();
         //getLoginPageActions().enterMobileNumberForRegister("9998887771");
         getLoginPageActions().enterPasswordForRegister(loginPageTestData.get("passwordForRegister"));
         getLoginPageActions().enterConfirmPasswordForRegister(loginPageTestData.get("confirmPasswordForRegister"));

@@ -43,7 +43,7 @@ public class ProjectPageTestOffline {
         getLoginPageActions().clickOnLoginButton();
     }
     
-    @Test(description = "create project via project tile")
+    @Test(description = "share project via diff platform")
     @Author(name = "Manjunatha K")
     public void verifyShareProjectPlatform() throws Exception {
     	loginToTheApplication();

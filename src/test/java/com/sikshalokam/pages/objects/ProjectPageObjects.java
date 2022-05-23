@@ -18,6 +18,9 @@ public class ProjectPageObjects {
 	 @FindBy(xpath = "//android.view.View[@text='Assigned to me']")
 	 public MobileElement assignedToMeOption;
 	 
+	 @FindBy(xpath = "//android.widget.TextView[@text='Projects assigned to me']")
+	 public MobileElement projectsAssignedToMeTitle;
+	 
 	 @FindBy(xpath = "//android.view.View[@text='Discovered by me']")
 	 public MobileElement discoverdByMeOption;
 	 
@@ -27,8 +30,11 @@ public class ProjectPageObjects {
 	 @FindBy(xpath = "//android.widget.EditText[@index='0']")
 	 public MobileElement projectSearchBox;
 	 
-	 @FindBy(xpath = "//android.widget.TextView[@index='0'])[4])")
+	 @FindBy(xpath = "(//android.widget.TextView[@index='0'])[4]")
 	 public MobileElement firstProject;
+	 
+	 @FindBy(xpath = "//android.widget.TextView[@index='0']")
+	 public MobileElement projectList;
 	 
 	 @FindBy(xpath = "//android.widget.TextView[@text='Create New Project']")
 	 public MobileElement createNewProject;
@@ -151,8 +157,12 @@ public class ProjectPageObjects {
      @FindBy(xpath = "//android.widget.TextView[@text='Gmail']")
      public MobileElement gmailPlatformOption;
      
-     @FindBy(xpath = "")
-     public MobileElement g;
+     @FindBy(xpath = "(//android.widget.Image[contains(@text,'create')])[1]")
+     public MobileElement createEditIconOnProjectView;
      
+     @FindBy(xpath = "//android.widget.Button[@text='SAVE EDITS']")
+     public MobileElement EditSaveButtonForProject;
      
+     @FindBy(xpath = "//android.view.View[@text='Project view']")
+     public MobileElement projectViewTitle;
 }

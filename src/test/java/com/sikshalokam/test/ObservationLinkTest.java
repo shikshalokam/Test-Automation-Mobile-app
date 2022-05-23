@@ -37,6 +37,7 @@ public class ObservationLinkTest {
     @Author(name = "Sunil H N")
     public void verifyObservationTab() throws Exception {
         observationLinkTestData = TestData.getFullGoogleSheetDataAsMapString("ObservationLink!A:B");
+        getObservationPageActions().clickOnAcceptButton();
         getChromeActions().enterUrl(observationLinkTestData.get("url"));
         getChromeActions().clickOnStartObservation();
         getObservationPageActions().clickOnFirstEntity();
@@ -52,6 +53,7 @@ public class ObservationLinkTest {
     @Author(name = "Sunil H N")
     public void VerifyObservationRedirection() throws Exception {
         observationLinkTestData = TestData.getFullGoogleSheetDataAsMapString("ObservationLink!A:B");
+        getObservationPageActions().clickOnAcceptButton();
         getChromeActions().enterUrl(observationLinkTestData.get("url"));
         getChromeActions().clickOnStartObservation();
         getObservationPageActions().clickOnFirstEntity();

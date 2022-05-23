@@ -38,6 +38,11 @@ public class LoginPageAction {
 
     }
 
+    public void verifyLoginFailedErrorMsg() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(loginPageObjects.loginErrorMsg);
+    	Logger.logAndReportPass("Login Error Message is displayed succesfully.");
+    }
+    
     public void verifyHomePage() throws Exception {
         Thread.sleep(6000);
         SikshaLokamClient.get().gestures().isDisplayed(loginPageObjects.programs);
@@ -61,6 +66,11 @@ public class LoginPageAction {
         Logger.logAndReportInfo("Clicked on head teacher option");
     }
 
+    public void clickOnTeacherOption() throws Exception {
+        SikshaLokamClient.get().gestures().click(loginPageObjects.TeacherOption);
+        Logger.logAndReportInfo("Clicked on teacher option");
+    }
+    
     public void clickOnLoginWithDikshaOption() throws Exception {
         SikshaLokamClient.get().gestures().click(loginPageObjects.loginWithDiksha);
         Logger.logAndReportInfo("Clicked on login button with diksha option");
@@ -72,13 +82,13 @@ public class LoginPageAction {
     }
 
     public void clickOnSelectYearOfBirthDropDwn() throws Exception {
-        Thread.sleep(3000);
         SikshaLokamClient.get().gestures().click(loginPageObjects.yearOfBirthDropDwn);
         Logger.logAndReportInfo("clicked on select year of birth dropdown");
 
     }
 
     public void selectYearOfBirthOption() throws Exception {
+    	Thread.sleep(2000);
         SikshaLokamClient.get().gestures().click(loginPageObjects.selectYear2021);
         Logger.logAndReportInfo("Year of Birth option is selected.");
     }
@@ -91,7 +101,7 @@ public class LoginPageAction {
 
     public void clickOnSubmitButtonToRegister() throws Exception {
         SikshaLokamClient.get().gestures().click(loginPageObjects.submitButtonToRegister);
-        Logger.logAndReportInfo("Clicked on the submit button on register page ");
+        Logger.logAndReportInfo("Clicked on the Register button on register page ");
     }
 
     public void verifyFormNameFieldEnabled() throws Exception {
@@ -132,7 +142,7 @@ public class LoginPageAction {
             Logger.logAndReportInfo("Submit Button is Enabled.");
         else
             Logger.logAndReportInfo("Submit Button is Disabled.");
-        Thread.sleep(20000);
+        Thread.sleep(5000);
     }
 
     public void verifyRegisterPageFields() throws Exception {
@@ -153,7 +163,7 @@ public class LoginPageAction {
     public void enterMobileNumberForRegister(String mobileNumber) throws Exception {
         loginPageObjects.mobileNumberToRegister.click();
         SikshaLokamClient.get().gestures().sendInteger(mobileNumber);
-
+        SikshaLokamClient.get().gestures().hideKeyBoard();
 
 //        SikshaLokamClient.get().gestures().click(loginPageObjects.mobileNumberToRegister);
 //
@@ -168,14 +178,24 @@ public class LoginPageAction {
     public void enterPasswordForRegister(String password) throws Exception {
         //SikshaLokamClient.get().gestures().click(loginPageObjects.passwordToRegister);
         SikshaLokamClient.get().gestures().sendValueToTextBox(loginPageObjects.passwordToRegister, password);
+        SikshaLokamClient.get().gestures().hideKeyBoard();
         Logger.logAndReportInfo("entered password for registration form : " + password);
     }
 
+    public void swipeUpToConfirmPassword() throws Exception {
+        SikshaLokamClient.get().gestures().scrollToMobileElement(loginPageObjects.passwordToRegister, "2");
+        //System.out.println(observationPageObjects.question5.getText());
+        // SikshaLokamClient.get().gestures().ScrollToAndClick(observationPageObjects.question5.getText());
+
+        Logger.logAndReportInfo("Scrolled to the confirmPassword field");
+    }
+    
     // enter confirm password to register form
     public void enterConfirmPasswordForRegister(String confirmPassword) throws Exception {
         //SikshaLokamClient.get().gestures().click(loginPageObjects.confirmPasswordToRegister);
         SikshaLokamClient.get().gestures().sendValueToTextBox(loginPageObjects.confirmPasswordToRegister, confirmPassword);
         Logger.logAndReportInfo("entered confirm password for registration form : " + confirmPassword);
+        SikshaLokamClient.get().gestures().hideKeyBoard();
     }
 
 }

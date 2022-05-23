@@ -9,6 +9,8 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+
+import org.openqa.selenium.interactions.internal.SingleKeyAction;
 import org.openqa.selenium.support.PageFactory;
 
 public class ObservationPageActions {
@@ -94,6 +96,29 @@ public class ObservationPageActions {
     public void sendObservationNameToSearch(String observationName) throws Exception {
     	SikshaLokamClient.get().gestures().sendValueToTextBox(observationPageObjects.search, observationName);
     	Logger.logAndReportInfo("Observation name entered is :" + observationName);
+    }
+    
+    public String searchObservation(String observationName) throws Exception{
+    	SikshaLokamClient.get().gestures().sendValueToTextBox(observationPageObjects.search, observationName);
+    	Logger.logAndReportInfo("Searched observation is " + observationName);
+    	Thread.sleep(2000);
+    	String displayedObserv = SikshaLokamClient.get().gestures().getText(observationPageObjects.firstObservation);
+    	return displayedObserv;
+    }
+    
+    public void clickOnFirstObservation() throws Exception {
+    	SikshaLokamClient.get().gestures().click(observationPageObjects.firstObservation);
+    	Logger.logAndReportInfo("Clicked on the first observation.");
+    }
+    
+    public void clickOnAddEntityButton() throws Exception {
+    	SikshaLokamClient.get().gestures().click(observationPageObjects.addEntity);
+    	Logger.logAndReportInfo("Clicke on the add entity button");
+    }
+    
+    public void clickOnObserveAgainButton() throws Exception {
+    	SikshaLokamClient.get().gestures().click(observationPageObjects.observeAgain);
+    	Logger.logAndReportInfo("Clicked on the observe again button");
     }
     
     
@@ -325,7 +350,18 @@ public class ObservationPageActions {
     	SikshaLokamClient.get().getAsserts().assertEquals(actualObservationName, observationNameSearched,
     				"Searched observation is not matching.");
     	System.out.println(actualObservationName);
-   		Logger.logAndReportPass("Enter full name title is matched.");
+   		Logger.logAndReportPass("Entered obervation is matched.");
+    }
+    
+    public void verifyAddEntitySearchButton() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(observationPageObjects.addEntitySearchButton);
+    	Logger.logAndReportPass("Add entity search button is displayed succesfully");
+    }
+    
+    public void verifyNewObservationAdded() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(observationPageObjects.observation2);
+    	String newObservationName = SikshaLokamClient.get().gestures().getText(observationPageObjects.observation2);
+    	Logger.logAndReportInfo("added new observataion is :"+newObservationName);
     }
 }
 

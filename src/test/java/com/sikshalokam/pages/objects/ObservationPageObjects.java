@@ -31,7 +31,7 @@ public class ObservationPageObjects {
     @FindBy(xpath = "//android.widget.Button[@text='UPDATE PROFILE']")
     public MobileElement updateProfile;
 
-    @FindBy(xpath = "//android.view.View[@text=\"Observation\"]")
+    @FindBy(xpath = "//android.widget.TextView[@text=\"Observation\"]")
     public MobileElement observationTxt;
 
     @FindBy(xpath = "//android.widget.Button[@text='Cancel CANCEL']")
@@ -144,6 +144,9 @@ public class ObservationPageObjects {
     @FindBy(xpath = "//android.widget.TextView[@text=\"Observation 1\"]")
     public MobileElement observation1;
 
+    @FindBy(xpath = "//android.widget.TextView[@text=\"Observation 2\"]")
+    public MobileElement observation2;
+    
     @FindBy(xpath = "(//android.view.View//android.view.View)[15]")
     public MobileElement firstDomain;
 
@@ -277,4 +280,6 @@ public class ObservationPageObjects {
     @FindBy(xpath = "(//android.widget.TextView[contains(@text,'Sqaa- For Testing')])[1]")
     public MobileElement searchedObservation;
     
+    @FindBy(xpath = "//android.widget.Button[contains(@text,'search')]")
+    public MobileElement addEntitySearchButton;
 }

@@ -17,6 +17,10 @@ public class LoginPageObjects {
     @FindBy(xpath="//android.widget.Button[contains(@text,'HT & Officials')]")
     // previously it was Head Teacher & Officials
     public MobileElement headTeacherOption;
+    
+    @FindBy(xpath="//android.widget.Button[contains(@text,'Teacher')]")
+    // previously it was Head Teacher & Officials
+    public MobileElement TeacherOption;
 
     @FindBy(xpath="//android.widget.Button[contains(@text,'Login with DIKSHA')]")
     public MobileElement loginWithDiksha;
@@ -65,6 +69,9 @@ public class LoginPageObjects {
 
     @FindBy(xpath = "//android.widget.Button[@text='Programs']")
     public MobileElement programs;
+    
+    @FindBy(xpath="//android.widget.TextView[@resource-id='error-summary']")
+    public MobileElement loginErrorMsg;
     
     
 }

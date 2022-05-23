@@ -29,7 +29,7 @@ public class ObservationPageTest {
         return new ObservationPageActions();
     }
 
-    // @BeforeMethod
+    //@BeforeMethod
     public void loginToTheApplication() throws Exception {
         System.out.println("loginToTheApplication");
         loginPageTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTest!A:B");
@@ -44,9 +44,9 @@ public class ObservationPageTest {
     }
 
 
-    @Test(description = "Verify Observation is able to open")
+   // @Test(description = "Verify Observation is able to open")
     @Author(name = "Sunil H N")
-    public void verifyObservationTab() throws Exception {
+    public void verifyObservationTabViaLink() throws Exception {
         WebElement e = SikshaLokamClient.get().driver().findElement(By.id("com.android.chrome:id/search_box_text"));
         e.click();
         Actions action = new Actions(SikshaLokamClient.get().driver());
@@ -58,9 +58,9 @@ public class ObservationPageTest {
 
     }
 
-    @Test(description = "Verify Entity List in Observation")
+    @Test(description = "Verify Observation is able to open")
     @Author(name = "Sunil H N")
-    public void VerifyEntityList() throws Exception {
+    public void verifyObservationTab() throws Exception {
         loginPageTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTest!A:B");
         getLoginPageActions().clickOnEnglish();
         getLoginPageActions().clickOnContinue();
@@ -74,10 +74,9 @@ public class ObservationPageTest {
 
     }
 
-
-    @Test(description = "Verify Observation")
+    @Test(description = "Verify Entity List in Observation")
     @Author(name = "Sunil H N")
-    public void AddNewObservation() throws Exception {
+    public void VerifyObservationTabAndEntityList() throws Exception {
         loginPageTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTest!A:B");
         getLoginPageActions().clickOnEnglish();
         getLoginPageActions().clickOnContinue();
@@ -86,10 +85,41 @@ public class ObservationPageTest {
         getLoginPageActions().enterUserName(loginPageTestData.get("userName"));
         getLoginPageActions().enterPassword(loginPageTestData.get("password"));
         getLoginPageActions().clickOnLoginButton();
-       // getLoginPageActions().clickOnLoginButton();
         getObservationPageActions().clickOnObservationTab();
         getObservationPageActions().verifyObservationTxt();
+        observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
+        getObservationPageActions().sendObservationNameToSearch(observationPageTestData.get("multpleRubricsObservationName"));
+        getObservationPageActions().clickOnFirstObservation();
+        getObservationPageActions().verifyAddEntityButton();
+        getObservationPageActions().clickOnAddEntityButton();
+        getObservationPageActions().verifyAddEntitySearchButton();
+    }
 
+
+    @Test(description = "Verify Observation")
+    @Author(name = "Sunil H N")
+    public void AddNewObservation() throws Exception {
+        loginPageTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTest!A:B");
+        observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
+        getLoginPageActions().clickOnEnglish();
+        getLoginPageActions().clickOnContinue();
+        getLoginPageActions().clickOnHeadTeacherOption();
+        getLoginPageActions().clickOnLoginWithDikshaOption();
+        getLoginPageActions().enterUserName(loginPageTestData.get("userName"));
+        getLoginPageActions().enterPassword(loginPageTestData.get("password"));
+        getLoginPageActions().clickOnLoginButton();
+        getObservationPageActions().clickOnObservationTab();
+        getObservationPageActions().verifyObservationTxt();
+        getObservationPageActions().sendObservationNameToSearch(observationPageTestData.get("observationNameToAddNewObservation"));
+        getObservationPageActions().clickOnFirstObservation();
+        getObservationPageActions().clickOnFirstEntity();
+        getObservationPageActions().verifyFirstObservationSubmission();
+        getObservationPageActions().clickOnObserveAgainButton();
+        getObservationPageActions().verifyNewObservationAdded();
+        //cleanup steps for next run
+        getObservationPageActions().clickOnSubmissionThreeDot();
+        getObservationPageActions().clickOnDeleteSubmission();
+        getObservationPageActions().clickOnSubmissionDeleteYesOption();
     }
 
 

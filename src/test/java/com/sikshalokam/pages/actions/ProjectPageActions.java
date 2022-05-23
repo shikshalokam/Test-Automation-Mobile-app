@@ -59,12 +59,14 @@ public class ProjectPageActions {
     }
     
     public void enterProjectTitle(String projectTitle) throws Exception {
+    	SikshaLokamClient.get().gestures().clear(projectPageObjects.projectTitleInput);
         SikshaLokamClient.get().gestures().click(projectPageObjects.projectTitleInput);
     	SikshaLokamClient.get().gestures().sendValueToTextBox(projectPageObjects.projectTitleInput, projectTitle);
     	Logger.logAndReportInfo("Project title entered is : " + projectTitle);
     }
     
     public void enterProjectDescription(String projectDesc) throws Exception {
+    	SikshaLokamClient.get().gestures().clear(projectPageObjects.projectDescriptionInput);
         SikshaLokamClient.get().gestures().click(projectPageObjects.projectDescriptionInput);
     	SikshaLokamClient.get().gestures().sendValueToTextBox(projectPageObjects.projectDescriptionInput, projectDesc);
     	Logger.logAndReportInfo("entered project description is : " + projectDesc);
@@ -153,6 +155,20 @@ public class ProjectPageActions {
     	Logger.logAndReportInfo("Clicked on the sync and share option from popup window.");
     }
     
+    public void clickOnEditIconOnProject() throws Exception {
+    	SikshaLokamClient.get().gestures().click(projectPageObjects.editIcon);
+    	Logger.logAndReportInfo("Clicked on the edit icon in project");
+    }
+    
+    public void clickOnEditOnProjectView() throws Exception {
+    	SikshaLokamClient.get().gestures().click(projectPageObjects.createEditIconOnProjectView);
+    	Logger.logAndReportInfo("Clicked on the edit icon in project view.");
+    }
+    
+    public void clickOnSaveEditForProject() throws Exception {
+    	SikshaLokamClient.get().gestures().click(projectPageObjects.EditSaveButtonForProject);
+    	Logger.logAndReportInfo("Clicked on the edit save button on project view");
+    }
     
     //**************************Verify*************************************************//
     
@@ -239,4 +255,26 @@ public class ProjectPageActions {
         else
         	Logger.logAndReportWarning("Gmail platform option is not displayed");
     }
+    
+    public void verifyProjectAssignedToMeTitle() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(projectPageObjects.projectsAssignedToMeTitle);
+    	Logger.logAndReportPass("project assigned to me title is displayed succesfully");
+    }
+    
+    public void verifyListOfProjects() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(projectPageObjects.firstProject);
+    	Logger.logAndReportPass("List of projects are displayed");
+    }
+    
+    public void verifyLoadMoreProjectButton() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(projectPageObjects.loadMoreProjects);
+    	Logger.logAndReportPass("Load more project button displayed succesfully.");
+    }
+    
+    public void verifyProjectViewTitle() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(projectPageObjects.projectViewTitle);
+    	Logger.logAndReportPass("Project view Title is displayed succesfully");
+    }
+    
+    
 }

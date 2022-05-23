@@ -47,7 +47,7 @@ public class ProjectPageTest {
     
     @Test(description = "create project via project tile")
     @Author(name = "Manjunatha K")
-    public void createProject() throws Exception {
+    public void createSyncAndSearchProject() throws Exception {
     	loginToTheApplication();
         getProjectPageActions().clickOnProjectTab();
         getProjectPageActions().verifyProjectPageTitle();
@@ -77,4 +77,32 @@ public class ProjectPageTest {
         getProjectPageActions().turnOnMobileData();**/
     }
     
+    @Test(description = "access all projects under assigned to me")
+    @Author(name = "Manjunatha K")
+    public void accessAllProjects() throws Exception {
+    	loginToTheApplication();
+        getProjectPageActions().clickOnProjectTab();
+        getProjectPageActions().verifyProjectPageTitle();
+        getProjectPageActions().clickOnAssignedToMeOption();
+        getProjectPageActions().verifyProjectAssignedToMeTitle();
+        getProjectPageActions().verifyLoadMoreProjectButton();
+        getProjectPageActions().verifyListOfProjects();
+    }
+    
+    @Test(description = "edit project details")
+    @Author(name = "Manjunatha K")
+    public void editProjectDetails() throws Exception {
+        projectPageTestData = TestData.getFullGoogleSheetDataAsMapString("Project!A:B");
+    	loginToTheApplication();
+        getProjectPageActions().clickOnProjectTab();
+        getProjectPageActions().verifyProjectPageTitle();
+        getProjectPageActions().searchProject(projectPageTestData.get("projectToEdit"));
+        getProjectPageActions().clickOnFirstProject();
+        getProjectPageActions().clickOnEditIconOnProject();
+        getProjectPageActions().clickOnEditOnProjectView();
+        getProjectPageActions().enterProjectTitle(projectPageTestData.get("projectTitleToEdit"));
+        getProjectPageActions().enterProjectDescription(projectPageTestData.get("projectDescriptionToEdit"));
+        getProjectPageActions().clickOnSaveEditForProject();
+        getProjectPageActions().verifyProjectViewTitle();
+    }
 }

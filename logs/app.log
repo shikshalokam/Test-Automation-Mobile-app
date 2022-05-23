@@ -1,11 +1,26 @@
-Thu Mar 24 16:50:13 IST 2022 INFO Gestures-click-86 Method: click for locator = Located by By.id: com.android.chrome:id/search_box_text status = true
-Thu Mar 24 16:50:20 IST 2022 INFO Logger-logAndReportInfo-95 Entered URL https://preprod.ntp.net.in/manage-learn/create-observation/2ba0cdc1284729331d296bf3ad118f5a
-Thu Mar 24 16:50:24 IST 2022 INFO Gestures-click-86 Method: click for locator = Located by By.xpath:  //android.view.View[@content-desc="Start Observation"]/android.widget.Button status = true
-Thu Mar 24 16:50:24 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on Start observation 
-Thu Mar 24 16:50:29 IST 2022 INFO Gestures-click-86 Method: click for locator = Located by By.xpath: (//android.widget.TextView)[4]  status = true
-Thu Mar 24 16:50:29 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the first entity from list 
-Thu Mar 24 16:50:31 IST 2022 INFO Gestures-click-86 Method: click for locator = Located by By.xpath: //android.widget.TextView[@text="Observation 1"] status = true
-Thu Mar 24 16:50:31 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on Observation 1
-Thu Mar 24 16:50:33 IST 2022 INFO Gestures-click-86 Method: click for locator = Located by By.xpath: (//android.view.View//android.view.View)[15] status = true
-Thu Mar 24 16:50:34 IST 2022 INFO Gestures-click-86 Method: click for locator = Located by By.xpath: (//android.view.View//android.view.View)[19] status = true
-Thu Mar 24 16:50:34 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on First Domain
+Thu May 19 18:24:51 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.Button[contains(@text,'English')] status = true
+Thu May 19 18:24:51 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on English language
+Thu May 19 18:25:23 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the continue button 
+Thu May 19 18:25:24 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.Button[contains(@text,'HT & Officials')] status = true
+Thu May 19 18:25:24 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on head teacher option
+Thu May 19 18:25:25 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.Button[contains(@text,'Login with DIKSHA')] status = true
+Thu May 19 18:25:25 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on login button with diksha option
+Thu May 19 18:25:30 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.EditText[@resource-id="username"] status = true
+Thu May 19 18:25:32 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.EditText[@resource-id="password"] status = true
+Thu May 19 18:25:34 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.Button[@resource-id="login"] status = true
+Thu May 19 18:25:43 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the Project tab
+Thu May 19 18:25:46 IST 2022 INFO Logger-logAndReportPass-110 Project Page title is displayed succesfully
+Thu May 19 18:25:46 IST 2022 INFO Logger-logAndReportInfo-95 Searched project is Drop Everything And Read
+Thu May 19 18:25:49 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: (//android.view.View)[29] status = true
+Thu May 19 18:25:49 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the first project
+Thu May 19 18:25:51 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.Button[contains(@text,'create Edit')] status = true
+Thu May 19 18:25:51 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the edit icon in project
+Thu May 19 18:25:53 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: (//android.widget.Image[contains(@text,'create')])[1] status = true
+Thu May 19 18:25:53 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the edit icon in project view.
+Thu May 19 18:25:55 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: (//android.widget.EditText)[1] status = true
+Thu May 19 18:25:56 IST 2022 INFO Logger-logAndReportInfo-95 Project title entered is : Drop Everything And Read
+Thu May 19 18:25:59 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: (//android.widget.EditText)[2] status = true
+Thu May 19 18:25:59 IST 2022 INFO Logger-logAndReportInfo-95 entered project description is : HM will enable teachers to help all students set up and use a reading corner at designated times in their respective homes.
+Thu May 19 18:26:01 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.Button[@text='SAVE EDITS'] status = true
+Thu May 19 18:26:01 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the edit save button on project view
+Thu May 19 18:26:02 IST 2022 INFO Logger-logAndReportPass-110 Project view Title is displayed succesfully
