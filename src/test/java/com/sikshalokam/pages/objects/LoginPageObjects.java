@@ -22,6 +22,9 @@ public class LoginPageObjects {
     // previously it was Head Teacher & Officials
     public MobileElement TeacherOption;
 
+    @FindBy(xpath="//android.widget.TextView[contains(@text,'Login to DIKSHA')]")
+    public MobileElement loginPageTitle;
+    
     @FindBy(xpath="//android.widget.Button[contains(@text,'Login with DIKSHA')]")
     public MobileElement loginWithDiksha;
 

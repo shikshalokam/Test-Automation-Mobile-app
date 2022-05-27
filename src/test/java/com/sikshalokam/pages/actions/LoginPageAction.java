@@ -76,6 +76,11 @@ public class LoginPageAction {
         Logger.logAndReportInfo("Clicked on login button with diksha option");
     }
 
+    public void verifyLoginPageTitle() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(loginPageObjects.loginPageTitle);
+    	Logger.logAndReportPass("Login page title is displayed succesfully.");
+    }
+    
     public void clickonRegister() throws Exception {
         SikshaLokamClient.get().gestures().click(loginPageObjects.registerButton);
         Logger.logAndReportInfo("clicked on register button.");

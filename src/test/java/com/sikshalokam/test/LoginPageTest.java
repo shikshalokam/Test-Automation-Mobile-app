@@ -26,6 +26,7 @@ public class LoginPageTest {
         getLoginPageActions().clickOnEnglish();
         getLoginPageActions().clickOnContinue();
         getLoginPageActions().clickOnHeadTeacherOption();
+        getLoginPageActions().verifyLoginPageTitle();
         getLoginPageActions().clickOnLoginWithDikshaOption();
         getLoginPageActions().enterUserName(loginPageTestData.get("userName"));
         getLoginPageActions().enterPassword(loginPageTestData.get("password"));
