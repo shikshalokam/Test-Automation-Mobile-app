@@ -202,5 +202,46 @@ public class LoginPageAction {
         Logger.logAndReportInfo("entered confirm password for registration form : " + confirmPassword);
         SikshaLokamClient.get().gestures().hideKeyBoard();
     }
+    
+    public void clickOnProgramsTile() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.programsTile);
+    	Logger.logAndReportInfo("Clicked on the programs tile");
+    }
+    
+    
+    //****************************Verify******************************************//
+    public void verifyProgramsTile() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(loginPageObjects.programsTile);
+    	Logger.logAndReportPass("Programs Tile is displayed succesfully. ");
+    }
 
+    public void verifyProjectsTile() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(loginPageObjects.projectsTile);
+    	Logger.logAndReportPass("Project Tile is displayed succesfully. ");
+    }
+    
+    public void verifyObservationTile() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(loginPageObjects.observationTile);
+    	Logger.logAndReportPass("Observation Tile is displayed succesfully. ");
+    }
+    
+    public void verifySurveyTile() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(loginPageObjects.surveyTile);
+    	Logger.logAndReportPass("Survey Tile is displayed succesfully. ");
+    }
+    
+    public void verifyCoursesTile() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(loginPageObjects.courseTile);
+    	Logger.logAndReportPass("Courses Tile is displayed succesfully. ");
+    }
+    
+    public void verifyReportsTile() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(loginPageObjects.reportsTile);
+    	Logger.logAndReportPass("Reports Tile is displayed succesfully. ");
+    }
+    
+    public void verifyProgramsTitle() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(loginPageObjects.programsTitle);
+    	Logger.logAndReportPass("Programs title is displayed succesfully");
+    }
 }

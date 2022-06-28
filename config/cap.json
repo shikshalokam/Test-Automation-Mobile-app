@@ -6,7 +6,7 @@
       "deviceName": "329943c9",
       "platformVersion": "11",
       "automationName": "UIAutomator2",
-      "appPackage": "preprod.diksha.app",
+      "appPackage": "staging.diksha.app",
       "appActivity": "org.sunbird.app.MainActivity",
       "newCommandTimeout": "9000",
       "autoGrantPermissions": "true",

@@ -8,16 +8,18 @@
 	</listeners>
 	<test thread-count="5" name="Test" preserve-order="true">
 		<classes>
-			<class name="com.sikshalokam.test.OneTimeExecution"/>
 			<!--<class name="com.sikshalokam.test.LoginPageTest"/>
+			<class name="com.sikshalokam.test.LoginPageTest"/>
 			<class name="com.sikshalokam.test.ObservationPageTest"/>
 			<class name="com.sikshalokam.test.ProjectPageTest"/>
+			<class name="com.sikshalokam.test.OneTimeExecution"/>
 			<class name="com.sikshalokam.test.ProjectPageTestOffline"/>-->
+			<class name="com.sikshalokam.test.ObservationLinkTest"/>
 			
 			<!--  <class name="com.sikshalokam.test.LoginPageTest"/>
 			<class name="com.sikshalokam.test.ObservationLinkTest"/>
 			<class name="com.sikshalokam.test.ObservationPageTest"/>
-			<class name="com.sikshalokam.test.ProjectPageTest"/>
+			<class name="com.sik pshalokam.test.ProjectPageTest"/>
 			<class name="com.sikshalokam.test.ProjectPageTestOffline"/>
 			 -->
 			

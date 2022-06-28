@@ -73,8 +73,29 @@ public class LoginPageObjects {
     @FindBy(xpath = "//android.widget.Button[@text='Programs']")
     public MobileElement programs;
     
+    //list of tiles on homepage
+    @FindBy(xpath = "//android.widget.Button[@text='Programs']")
+    public MobileElement programsTile;
+    
+    @FindBy(xpath = "//android.widget.Button[@text='Projects']")
+    public MobileElement projectsTile;
+    
+    @FindBy(xpath = "//android.widget.Button[@text='Observation']")
+    public MobileElement observationTile;
+    
+    @FindBy(xpath = "//android.widget.Button[@text='Surveys']")
+    public MobileElement surveyTile;
+    
+    @FindBy(xpath = "//android.widget.Button[@text='Courses']")
+    public MobileElement courseTile;
+    
+    @FindBy(xpath = "//android.widget.Button[@text='Reports']")
+    public MobileElement reportsTile;
+    
     @FindBy(xpath="//android.widget.TextView[@resource-id='error-summary']")
     public MobileElement loginErrorMsg;
     
+    @FindBy(xpath = "//android.widget.TextView[@text='Programs']")
+    public MobileElement programsTitle;
     
 }

@@ -58,6 +58,7 @@ public class ObservationPageTest {
 
     }
 
+    //removed from execution list
     @Test(description = "Verify Observation is able to open")
     @Author(name = "Sunil H N")
     public void verifyObservationTab() throws Exception {

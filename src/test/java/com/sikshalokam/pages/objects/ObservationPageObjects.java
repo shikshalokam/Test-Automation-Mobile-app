@@ -132,7 +132,7 @@ public class ObservationPageObjects {
     @FindBy(xpath = "(//android.widget.RadioButton[contains(@text,'Google Forms')])[2]")
     public MobileElement googleFormRadioOption;
 
-    @FindBy(xpath = "//android.widget.Button[@text='Cancel']")
+    @FindBy(xpath = "//android.widget.Button[@text='Next']")
     public MobileElement nextButtonOnQuestionPage;
 
     @FindBy(xpath = "//android.widget.Button[@text='back BACK']")

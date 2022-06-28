@@ -90,7 +90,7 @@ public class ObservationLinkTest {
         getObservationPageActions().clickOnFirstObservationSubmission();
         getObservationPageActions().verifyDomainTitle();
         getObservationPageActions().clickOnFirstHpDomain();
-        getObservationPageActions().clickOnStartObservation();
+        //getObservationPageActions().clickOnStartObservation();
         getObservationPageActions().clickOnFirstObservationUnderHpDomain();
         getObservationPageActions().verifyQuestionMapIcon();
         getObservationPageActions().verifyNextButtonOnQuestionPage();

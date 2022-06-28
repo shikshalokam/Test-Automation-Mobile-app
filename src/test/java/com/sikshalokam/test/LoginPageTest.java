@@ -110,5 +110,17 @@ public class LoginPageTest {
         SikshaLokamClient.get().getScreenShot().screenshot();
     }
 
-
+    @Test(description = "register application")
+    @Author(name = "Manjunath Kumar")
+    public void loginAndVerifyAllTiles() throws Exception {
+    	loginToApplication();
+    	getLoginPageActions().verifyProgramsTile();
+    	getLoginPageActions().verifyProjectsTile();
+    	getLoginPageActions().verifyObservationTile();
+    	getLoginPageActions().verifySurveyTile();
+    	getLoginPageActions().verifyCoursesTile();
+    	getLoginPageActions().verifyReportsTile();
+    	getLoginPageActions().clickOnProgramsTile();
+    	getLoginPageActions().verifyProgramsTitle();
+    }
 }

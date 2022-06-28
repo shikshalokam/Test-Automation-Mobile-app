@@ -45,8 +45,8 @@ public class OneTimeExecution {
         getLoginPageActions().clickOnContinue();
         getLoginPageActions().clickOnHeadTeacherOption();
         getLoginPageActions().clickOnLoginWithDikshaOption();
-        getLoginPageActions().enterUserName(loginPageTestData.get("userName3"));
-        getLoginPageActions().enterPassword(loginPageTestData.get("password3"));
+        getLoginPageActions().enterUserName(loginPageTestData.get("userName4"));
+        getLoginPageActions().enterPassword(loginPageTestData.get("password4"));
         getLoginPageActions().clickOnLoginButton();
     }
     
