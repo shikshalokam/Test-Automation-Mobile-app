@@ -112,6 +112,7 @@ public class ObservationPageTest {
         getObservationPageActions().clickOnObservationTab();
         getObservationPageActions().verifyObservationTxt();
         getObservationPageActions().sendObservationNameToSearch(observationPageTestData.get("observationNameToAddNewObservation"));
+        Thread.sleep(5000);
         getObservationPageActions().clickOnFirstObservation();
         getObservationPageActions().clickOnFirstEntity();
         getObservationPageActions().verifyFirstObservationSubmission();

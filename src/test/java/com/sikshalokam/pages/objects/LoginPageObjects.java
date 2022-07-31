@@ -43,6 +43,12 @@ public class LoginPageObjects {
     @FindBy(xpath="xpath=\"//android.widget.TextView[contains(@text,'Welcome')]")
     public MobileElement welcomeTitle;
     
+    @FindBy(xpath="//android.widget.TextView[contains(@text,'Register on DIKSHA')]")
+    public MobileElement registerPageTitle;
+    
+    @FindBy(xpath="//android.widget.TextView[contains(@text,'To discover relevant')]")
+    public MobileElement contentToRegister;
+    
     @FindBy(xpath="//android.view.View[@content-desc=\"Register here\"]/android.widget.TextView")
     public MobileElement registerButton;
     
@@ -55,7 +61,49 @@ public class LoginPageObjects {
     @FindBy(xpath="//android.widget.EditText[@resource-id=\"signup-form-name\"]")
     public MobileElement nameToRegister;
     
-    @FindBy(xpath="//android.widget.EditText[@resource-id='signup-form-phone']")
+    @FindBy(xpath="//android.widget.EditText[@resource-id=\"mat-input-0\"]")
+    public MobileElement yearOfBirthToRegister;
+    
+    @FindBy(xpath = "//android.view.View[@text='1996']")
+    public MobileElement dateOfBirthYear;
+    
+    @FindBy(xpath="//android.widget.Button[contains(@text,'CONTINUE')]")
+    public MobileElement continueButtonForRegistration;
+    
+    @FindBy(xpath="//android.view.View[@resource-id='persona']")
+    public MobileElement roleToRegister;
+    
+    @FindBy(xpath="//android.widget.TextView[@text='Head teacher & Official']")
+    public MobileElement HTAndOfficialRoleOption;
+    
+    @FindBy(xpath="//android.view.View[@resource-id='subPersona']")
+    public MobileElement subRoleToRegister;
+    
+    @FindBy(xpath="//android.widget.TextView[@text='HM']")
+    public MobileElement HMSubRoleOption;
+    
+    @FindBy(xpath="//android.view.View[@resource-id='state']")
+    public MobileElement stateToRegister;
+    
+    @FindBy(xpath="//android.widget.TextView[@text='Uttar Pradesh']")
+    public MobileElement selectUPStateToRegister;
+    
+    @FindBy(xpath="//android.widget.TextView[@text='Uttar Pradesh']")
+    public MobileElement selectAPStateToRegister;
+    
+    @FindBy(xpath="//android.view.View[@resource-id='district']")
+    public MobileElement districtToRegister;
+    
+    @FindBy(xpath="//android.widget.TextView[@text='AGRA']")
+    public MobileElement selectAgraDistrictToRegister;
+    
+    @FindBy(xpath="//android.widget.Button[@text='SUBMIT']")
+    public MobileElement submitButtonForContentSubmission;
+    
+    @FindBy(xpath="//android.view.View[contains(@text,'One Time Password')]")
+    public MobileElement oneTimePasswordTitle;
+    
+    @FindBy(xpath="//android.widget.EditText[@resource-id='withphone']")
     public MobileElement mobileNumberToRegister;
 
     @FindBy(xpath="//android.widget.EditText[@resource-id=\"signup-form-password\"]")

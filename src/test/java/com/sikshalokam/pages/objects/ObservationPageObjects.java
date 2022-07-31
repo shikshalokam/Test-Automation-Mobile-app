@@ -22,8 +22,8 @@ public class ObservationPageObjects {
     @FindBy(xpath = "//android.view.View[@index='2']")
     public MobileElement firstObservation;
 
-    @FindBy(xpath = "//android.widget.Button[@text='ADD ENTITY']")
-    public MobileElement addEntity;
+    @FindBy(xpath = "//android.widget.Button[@text='Add state']")
+    public MobileElement addState;
 
     @FindBy(xpath = "//android.view.View[@index='2']")
     public MobileElement firstEntity;
@@ -58,10 +58,10 @@ public class ObservationPageObjects {
     @FindBy(xpath = "//android.widget.Button[@text='Completed']")
     public MobileElement completed;
 
-    @FindBy(xpath = "//android.widget.Button[@text='OBSERVE AGAIN']")
+    @FindBy(xpath = "//android.widget.Button[@text='Observe again']")
     public MobileElement observeAgain;
 
-    @FindBy(xpath = "//android.widget.Button[@text='VIEW ENTITY REPORT']")
+    @FindBy(xpath = "//android.widget.Button[@text='View entity report']")
     public MobileElement viewEntityReport;
 
     @FindBy(xpath = "(//android.widget.Image[@index='3'])[1]")
@@ -96,13 +96,13 @@ public class ObservationPageObjects {
     @FindBy(xpath = "//android.widget.Button[@text='EDIT']")
     public MobileElement editObservationSubmission;
 
-    @FindBy(xpath = "//android.widget.Button[@text='DELETE']")
+    @FindBy(xpath = "//android.widget.Button[@text='Delete']")
     public MobileElement deleteObservationSubmission;
 
-    @FindBy(xpath = "//android.widget.Button[@text='YES']")
+    @FindBy(xpath = "//android.widget.Button[@text='Yes']")
     public MobileElement observationSubmissionDeleteYes;
 
-    @FindBy(xpath = "//android.widget.Button[@text='NO']")
+    @FindBy(xpath = "//android.widget.Button[@text='No']")
     public MobileElement observationSubmissionDeleteNo;
 
     @FindBy(xpath = "//android.widget.TextView[contains(@text,'Hp_tna_for_skill_and_mindset')]")
@@ -114,10 +114,10 @@ public class ObservationPageObjects {
     @FindBy(xpath = "//android.widget.TextView[@text='Add entity to observe']")
     public MobileElement addEntityToObserveTitle;
 
-    @FindBy(xpath = "//android.widget.Button[@text='YES']")
+    @FindBy(xpath = "//android.widget.Button[@text='Yes']")
     public MobileElement entityDeleteConfirmationYes;
 
-    @FindBy(xpath = "//android.widget.Button[@text='NO']")
+    @FindBy(xpath = "//android.widget.Button[@text='No']")
     public MobileElement entityDeleteConfirmationNo;
 
     @FindBy(xpath = "//android.widget.Button[@text='arrow forward Start Observation']")
@@ -135,7 +135,7 @@ public class ObservationPageObjects {
     @FindBy(xpath = "//android.widget.Button[@text='Next']")
     public MobileElement nextButtonOnQuestionPage;
 
-    @FindBy(xpath = "//android.widget.Button[@text='back BACK']")
+    @FindBy(xpath = "//android.widget.Button[@text='back Back']")
     public MobileElement backButtonOnQuestionPage;
 
     @FindBy(xpath = "//android.widget.Button[@text='back']")

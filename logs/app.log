@@ -1,7 +1,14 @@
-Sat Jun 25 08:11:56 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.chained({By.xpath: //android.widget.Button[@resource-id="com.android.chrome:id/terms_accept"]}) status = true
-Sat Jun 25 08:11:58 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.chained({By.xpath: //android.widget.Button[@resource-id="com.android.chrome:id/positive_button"]}) status = true
-Sat Jun 25 08:11:58 IST 2022 INFO Logger-logAndReportInfo-95 Google chrome browser is launched.
-Sat Jun 25 08:12:01 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.id: com.android.chrome:id/search_box_text status = true
-Sat Jun 25 08:12:07 IST 2022 INFO Logger-logAndReportInfo-95 Entered URL https://preprod.ntp.net.in/manage-learn/create-observation/0bdf7574988153eb6814d5a40746aeac
-Sat Jun 25 08:12:12 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath:  //android.view.View[@content-desc="Start Observation"]/android.widget.Button status = true
-Sat Jun 25 08:12:12 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on Start observation 
+Fri Jul 29 14:11:16 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.Button[contains(@text,'English')] status = true
+Fri Jul 29 14:11:16 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on English language
+Fri Jul 29 14:11:48 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the continue button 
+Fri Jul 29 14:11:49 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.Button[contains(@text,'HT & Officials')] status = true
+Fri Jul 29 14:11:49 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on head teacher option
+Fri Jul 29 14:11:51 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on login button with diksha option
+Fri Jul 29 14:11:56 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.EditText[@resource-id="username"] status = true
+Fri Jul 29 14:11:58 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.EditText[@resource-id="password"] status = true
+Fri Jul 29 14:12:00 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.Button[@resource-id="login"] status = true
+Fri Jul 29 14:12:11 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the Project tab
+Fri Jul 29 14:12:14 IST 2022 INFO Logger-logAndReportInfo-95 Searched project is Lead the improvement
+Fri Jul 29 14:12:17 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: (//android.view.View)[29] status = true
+Fri Jul 29 14:12:17 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the first project
+Fri Jul 29 14:12:42 IST 2022 ERROR Gestures-click-76 None of the Element Selected Please check the Element Once: Located by By.xpath: //android.widget.Button[contains(@text,'share')]

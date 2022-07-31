@@ -39,7 +39,7 @@ public class ProjectPageObjects {
 	 @FindBy(xpath = "//android.widget.TextView[@text='Create New Project']")
 	 public MobileElement createNewProject;
 	 
-	 @FindBy(xpath = "//android.widget.Button[@text='LOAD MORE PROJECTS']")
+	 @FindBy(xpath = "//android.widget.Button[@text='Load more projects']")
 	 public MobileElement loadMoreProjects;
 	 
 	 @FindBy(xpath = "//android.widget.CheckBox[@resource-id='ion-cb-0']")
@@ -82,36 +82,37 @@ public class ProjectPageObjects {
 	 @FindBy(xpath = "(//android.widget.CheckBox[contains(@text,'Others')])[2]")
 	 public MobileElement othersCategory;
 	 
-	 @FindBy(xpath = "//android.widget.Button[@text='SUBMIT']")
+	 @FindBy(xpath = "//android.widget.Button[@text='Submit']")
 	 public MobileElement submitButton;
 			 
-	 @FindBy(xpath = "//android.widget.Button[@text='CANCEL']")
+	 @FindBy(xpath = "//android.widget.Button[@text='Cancel']")
 	 public MobileElement cancelButton;
 	 
-	 @FindBy(xpath = "//android.widget.Button[@text='CREATE AND CONTINUE']")
+	 @FindBy(xpath = "//android.widget.Button[@text='Create and continue']")
 	 public MobileElement createAndContinueButton;
 	 
 	 @FindBy(xpath = "//android.widget.TextView[@text='Project Created']")
 	 public MobileElement projectCreatedTitle;
 	 
-	 @FindBy(xpath ="//android.widget.Button[@text='CONTINUE']")
+	 @FindBy(xpath ="//android.widget.Button[@text='Continue']")
 	 public MobileElement continueOption;
 	 
-	 @FindBy(xpath = "//android.widget.Button[@text='EDIT']")
+	 @FindBy(xpath = "//android.widget.Button[@text='Edit']")
 	 public MobileElement editOption;
 	 
 	 @FindBy(xpath = "//android.widget.TextView[contains(@text,'Your Project has been created successfully')]")
 	 public MobileElement succesMsg;
 	 
-	 @FindBy(xpath = "//android.widget.TextView[@text='View Project']")
+	 @FindBy(xpath = "//android.widget.TextView[@text='View project']")
 	 public MobileElement viewProjectsButton;
 	 
 	 @FindBy(xpath = "//android.widget.TextView[contains(@text,'Your Project has been created successfully')]")
 	 public MobileElement successMsg;
 	 
-	 @FindBy(xpath = "//android.widget.Button[@text='VIEW PROJECT']")
+	 @FindBy(xpath = "//android.widget.Button[@text='View project']")
 	 public MobileElement viewProjectsButtonoNPopup;
 	 
+	 //s is Capital inside text 
 	 @FindBy(xpath = "//android.widget.Button[@text='sync circle Synced']")
 	 public MobileElement syncOption;
 	
@@ -139,10 +140,10 @@ public class ProjectPageObjects {
      @FindBy(xpath = "(//android.view.View)[29]")
      public MobileElement firstSearchedProject;
      
-     @FindBy(xpath = "//android.widget.Button[contains(@text,'DONT SYNC')]")
+     @FindBy(xpath = "//android.widget.Button[contains(@text,'Dont sync')]")
      public MobileElement dontSyncOption;
      
-     @FindBy(xpath = "//android.widget.Button[contains(@text,'SYNC & SHARE')]")
+     @FindBy(xpath = "//android.widget.Button[contains(@text,'Sync & share')]")
      public MobileElement syncAndShareOption;
      
      @FindBy(xpath = "//android.widget.TextView[@text='Share']")
@@ -160,7 +161,7 @@ public class ProjectPageObjects {
      @FindBy(xpath = "(//android.widget.Image[contains(@text,'create')])[1]")
      public MobileElement createEditIconOnProjectView;
      
-     @FindBy(xpath = "//android.widget.Button[@text='SAVE EDITS']")
+     @FindBy(xpath = "//android.widget.Button[@text='Save edits']")
      public MobileElement EditSaveButtonForProject;
      
      @FindBy(xpath = "//android.view.View[@text='Project view']")

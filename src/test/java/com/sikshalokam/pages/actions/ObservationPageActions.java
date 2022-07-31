@@ -96,6 +96,7 @@ public class ObservationPageActions {
     public void sendObservationNameToSearch(String observationName) throws Exception {
     	SikshaLokamClient.get().gestures().sendValueToTextBox(observationPageObjects.search, observationName);
     	Logger.logAndReportInfo("Observation name entered is :" + observationName);
+    	Thread.sleep(2000);
     }
     
     public String searchObservation(String observationName) throws Exception{
@@ -112,7 +113,7 @@ public class ObservationPageActions {
     }
     
     public void clickOnAddEntityButton() throws Exception {
-    	SikshaLokamClient.get().gestures().click(observationPageObjects.addEntity);
+    	SikshaLokamClient.get().gestures().click(observationPageObjects.addState);
     	Logger.logAndReportInfo("Clicke on the add entity button");
     }
     
@@ -139,7 +140,7 @@ public class ObservationPageActions {
     }
 
     public void verifyAddEntityButton() throws Exception {
-        SikshaLokamClient.get().gestures().isDisplayed(observationPageObjects.addEntity);
+        SikshaLokamClient.get().gestures().isDisplayed(observationPageObjects.addState);
         Logger.logAndReportPass("Add entity is displayed succesfully");
     }
 

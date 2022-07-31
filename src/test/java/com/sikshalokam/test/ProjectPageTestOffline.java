@@ -54,7 +54,7 @@ public class ProjectPageTestOffline {
         //getProjectPageActions().clickOnStartImprovement();
         getProjectPageActions().clickOnShareButton();
         getProjectPageActions().clickOnSyncAndShare();
-        getProjectPageActions().verifySharePlatformTitle();
+        //getProjectPageActions().verifySharePlatformTitle();
         getProjectPageActions().verifyWhatsAppPlatformOption();
         getProjectPageActions().verifyGmailPlatformOption();
     }

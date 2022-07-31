@@ -13,6 +13,7 @@ public class LoginPageTest {
 
     Map<String, String> loginPageTestData;
     String nameForCredential;
+    String dateOfBirth;
     String mobileNumber;
 
     public LoginPageAction getLoginPageActions() throws Exception {
@@ -84,7 +85,7 @@ public class LoginPageTest {
 
     @Test(description = "register application")
     @Author(name = "Manjunath Kumar")
-    public void registration() throws Exception {
+    public void OldCReleaseregistration() throws Exception {
         loginPageTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTest!A:B");
         getLoginPageActions().clickOnEnglish();
         getLoginPageActions().clickOnContinue();
@@ -122,5 +123,42 @@ public class LoginPageTest {
     	getLoginPageActions().verifyReportsTile();
     	getLoginPageActions().clickOnProgramsTile();
     	getLoginPageActions().verifyProgramsTitle();
+    }
+    
+    @Test(description = "register application and check fields")
+    @Author(name="Manjunath Kumar")
+    public void registration() throws Exception {
+    	
+    	loginPageTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTest!A:B");
+        getLoginPageActions().clickOnEnglish();
+        getLoginPageActions().clickOnContinue();
+        getLoginPageActions().clickOnHeadTeacherOption();
+        getLoginPageActions().clickOnLoginWithDikshaOption();
+        getLoginPageActions().clickonRegister();
+    	//getLoginPageActions().verifyRegisterPageTitle();
+        nameForCredential = loginPageTestData.get("nameForRegister") + RandomStringUtils.randomAlphabetic(3);
+        getLoginPageActions().enterNameForRegister(nameForCredential); //if name should be unique - need to add random alphabets or numbers
+        getLoginPageActions().enterDOBForRegister(loginPageTestData.get("dateOfBirth"));
+        //getLoginPageActions().selectDateOfBirthYearToRegister();
+        getLoginPageActions().clickOnContinueButtonForRegistration();
+        getLoginPageActions().verifyContentForRegister();
+        getLoginPageActions().clickOnRoleToRegisterDropdwn();
+        getLoginPageActions().selectHTAndOfficialRoleToRegister();
+        getLoginPageActions().clickOnStateToRegisterDropdwn();
+        getLoginPageActions().swipeUpToUttarPradeshState();
+        getLoginPageActions().selectUttarPradeshStateToRegister();
+        getLoginPageActions().clickOnsubRoleToRegister();
+        getLoginPageActions().selectHMSubRoletoRegister();
+        getLoginPageActions().clickOnDistictToRegisterDropdwn();
+        getLoginPageActions().selectAgraDistrictToRegister();
+        getLoginPageActions().clickOnSubmitButtonToContentSubmission();
+        mobileNumber = loginPageTestData.get("randomMobileNo") + RandomStringUtils.randomNumeric(5);
+        getLoginPageActions().enterMobileNumberForRegister(mobileNumber);
+        //getLoginPageActions().swipeUpToConfirmPassword();
+        getLoginPageActions().enterPasswordForRegister(loginPageTestData.get("passwordForRegister"));
+        getLoginPageActions().enterConfirmPasswordForRegister(loginPageTestData.get("confirmPasswordForRegister"));
+        getLoginPageActions().clickOnSubmitButtonToRegister();
+        Thread.sleep(5000);
+        getLoginPageActions().verifyOtpPage();
     }
 }

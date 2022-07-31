@@ -4,7 +4,7 @@
     "caps": {
       "platformName": "Android",
       "deviceName": "329943c9",
-      "platformVersion": "11",
+      "platformVersion": "12",
       "automationName": "UIAutomator2",
       "appPackage": "staging.diksha.app",
       "appActivity": "org.sunbird.app.MainActivity",
@@ -19,7 +19,7 @@
     "caps": {
       "platformName": "Android",
       "deviceName": "emulator-5554",
-      "platformVersion": "11",
+      "platformVersion": "12",
       "automationName": "UIAutomator2",
       "appPackage": "com.android.chrome",
       "appActivity": "com.google.android.apps.chrome.Main",

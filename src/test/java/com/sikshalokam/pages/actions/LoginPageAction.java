@@ -4,6 +4,8 @@ import com.sikshalokam.client.SikshaLokamClient;
 import com.sikshalokam.pages.objects.LoginPageObjects;
 import com.sikshalokam.utils.logger.Logger;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+
+import org.codehaus.groovy.util.SingleKeyHashMap;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPageAction {
@@ -72,7 +74,8 @@ public class LoginPageAction {
     }
     
     public void clickOnLoginWithDikshaOption() throws Exception {
-        SikshaLokamClient.get().gestures().click(loginPageObjects.loginWithDiksha);
+    	SikshaLokamClient.get().gestures().waitAndClickElementisVisible(loginPageObjects.loginWithDiksha);	
+        //SikshaLokamClient.get().gestures().click(loginPageObjects.loginWithDiksha);
         Logger.logAndReportInfo("Clicked on login button with diksha option");
     }
 
@@ -109,6 +112,16 @@ public class LoginPageAction {
         Logger.logAndReportInfo("Clicked on the Register button on register page ");
     }
 
+    public void verifyRegisterPageTitle() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(loginPageObjects.registerPageTitle);
+    	Logger.logAndReportPass("Register page title is displayed succesfully");
+    }
+    
+    public void verifyContentForRegister() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(loginPageObjects.contentToRegister);
+    	Logger.logAndReportPass("Content for Register page title is displayed succesfully");
+    }
+    
     public void verifyFormNameFieldEnabled() throws Exception {
         boolean state = SikshaLokamClient.get().gestures().isEnabled(loginPageObjects.nameToRegister);
         if (state)
@@ -164,6 +177,22 @@ public class LoginPageAction {
         Logger.logAndReportInfo("entered name for registration form : " + userName);
     }
 
+ // enter date of birth year to register form
+    public void enterDOBForRegister(String dateOfBirthYear) throws Exception {
+        // SikshaLokamClient.get().gestures().click(loginPageObjects.nameToRegister);
+        SikshaLokamClient.get().gestures().sendValueToTextBox(loginPageObjects.yearOfBirthToRegister, dateOfBirthYear);
+        Logger.logAndReportInfo("entered Date of birth year for registration form : " + dateOfBirthYear);
+    }
+    
+    public void selectDateOfBirthYearToRegister() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.dateOfBirthYear);
+    	Logger.logAndReportInfo("Date of birth year is selected.");
+    }
+    public void clickOnContinueButtonForRegistration() throws Exception {
+            loginPageObjects.continueButtonForRegistration.click();
+            Logger.logAndReportInfo("Clicked on the continue button ");
+    }
+    
     // enter mobile number to register form
     public void enterMobileNumberForRegister(String mobileNumber) throws Exception {
         loginPageObjects.mobileNumberToRegister.click();
@@ -200,7 +229,7 @@ public class LoginPageAction {
         //SikshaLokamClient.get().gestures().click(loginPageObjects.confirmPasswordToRegister);
         SikshaLokamClient.get().gestures().sendValueToTextBox(loginPageObjects.confirmPasswordToRegister, confirmPassword);
         Logger.logAndReportInfo("entered confirm password for registration form : " + confirmPassword);
-        SikshaLokamClient.get().gestures().hideKeyBoard();
+       // SikshaLokamClient.get().gestures().hideKeyBoard();
     }
     
     public void clickOnProgramsTile() throws Exception {
@@ -208,8 +237,68 @@ public class LoginPageAction {
     	Logger.logAndReportInfo("Clicked on the programs tile");
     }
     
+    public void clickOnRoleToRegisterDropdwn() throws Exception {
+    	Thread.sleep(10000);
+    	SikshaLokamClient.get().gestures().waitAndClickElementisVisible(loginPageObjects.roleToRegister);
+    	//SikshaLokamClient.get().gestures().click(loginPageObjects.roleToRegister);
+    	Logger.logAndReportInfo("Clicked on the role to register dropdown");
+    }
     
+    public void selectHTAndOfficialRoleToRegister() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.HTAndOfficialRoleOption);
+    	Logger.logAndReportInfo("Selected HT and Official Role to register");
+    }
+    
+    
+    public void clickOnStateToRegisterDropdwn() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.stateToRegister);
+    	Logger.logAndReportInfo("Clicked on the state dropdown to register");
+    }
+    
+    public void swipeUpToUttarPradeshState() throws Exception {
+        SikshaLokamClient.get().gestures().scrollToMobileElement(loginPageObjects.selectUPStateToRegister, "6");
+        //System.out.println(observationPageObjects.question5.getText());
+        // SikshaLokamClient.get().gestures().ScrollToAndClick(observationPageObjects.question5.getText());
+
+        Logger.logAndReportInfo("Scrolled to the confirmPassword field");
+    }
+    
+    public void selectUttarPradeshStateToRegister() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.selectUPStateToRegister);
+    	Logger.logAndReportInfo("Selected Uttar Pradesh to register");
+    }
+    
+    public void clickOnsubRoleToRegister() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.subRoleToRegister);
+    	Logger.logAndReportInfo("Clicked on the sub role drop down to register");
+    }
+    
+    public void selectHMSubRoletoRegister() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.HMSubRoleOption);
+    	Logger.logAndReportInfo("HM Sub role is selected to register");
+    }
+    
+    public void clickOnDistictToRegisterDropdwn() throws Exception {
+		SikshaLokamClient.get().gestures().click(loginPageObjects.districtToRegister);
+		Logger.logAndReportInfo("Clicked on the district to register");
+	}
+    
+    public void selectAgraDistrictToRegister() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.selectAgraDistrictToRegister);
+    	Logger.logAndReportInfo("Agra district is selected to register");
+    }
+    
+    public void clickOnSubmitButtonToContentSubmission() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.submitButtonForContentSubmission);
+    	Logger.logAndReportInfo("Clicked on the submit button for content submission to register");
+    }
     //****************************Verify******************************************//
+    
+    public void verifyOtpPage() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(loginPageObjects.oneTimePasswordTitle);
+    	Logger.logAndReportPass("OTP Page title is displayed succesfully");
+    }
+    
     public void verifyProgramsTile() throws Exception {
     	SikshaLokamClient.get().gestures().isDisplayed(loginPageObjects.programsTile);
     	Logger.logAndReportPass("Programs Tile is displayed succesfully. ");

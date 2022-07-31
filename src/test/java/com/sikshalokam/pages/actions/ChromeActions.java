@@ -38,4 +38,10 @@ public class ChromeActions {
     	Logger.logAndReportInfo("Clicked on the start project. ");
     	Thread.sleep(2000);
     }
+    
+    public void clickUrl(String url) throws Exception {
+        new Actions(SikshaLokamClient.get().driver()).sendKeys(url).perform();
+        ((AndroidDriver) SikshaLokamClient.get().driver()).pressKey(new KeyEvent(AndroidKey.ENTER));
+        Logger.logAndReportInfo("Entered URL "+url);
+    }
 }
