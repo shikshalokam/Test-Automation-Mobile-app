@@ -170,6 +170,17 @@ public class ProjectPageActions {
     	Logger.logAndReportInfo("Clicked on the edit save button on project view");
     }
     
+    public void clickOnTaskDetails() throws Exception {
+    	SikshaLokamClient.get().gestures().click(projectPageObjects.taskDetailsTab);
+    	Logger.logAndReportInfo("Clicked on the task details tab");
+    }
+    
+    public void clickOnTask1() throws Exception {
+    	SikshaLokamClient.get().gestures().click(projectPageObjects.task1);
+    	Logger.logAndReportInfo("clicked on the task1 details");
+    }
+    
+    
     //**************************Verify*************************************************//
     
     public void verifyProjectPageTitle() throws Exception {
@@ -234,6 +245,11 @@ public class ProjectPageActions {
     	Logger.logAndReportPass("Project is downloaded.");
     }
     
+    public void verifyStartImprovementButton() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(projectPageObjects.startImprovement);
+    	Logger.logAndReportPass("Project view - Start improvement button is displayed succesfully.");
+    }
+    
     public void verifySharePlatformTitle() throws Exception {
         SikshaLokamClient.get().gestures().isDisplayed(projectPageObjects.sharePlatformTitle);
         Logger.logAndReportPass("Share Platform Page title is displayed succesfully");
@@ -276,5 +292,19 @@ public class ProjectPageActions {
     	Logger.logAndReportPass("Project view Title is displayed succesfully");
     }
     
+    public void verifyNonEditModeInProject() throws Exception {
+    	Boolean eleValue = SikshaLokamClient.get().gestures().isEnabled(projectPageObjects.selectStatus);
+    	if(eleValue == true) {
+    		Logger.logAndReportPass("select status dropdown is in enabled mode" + eleValue);	
+    	} else {
+    		Logger.logAndReportPass("select status dropdown is in disabled mode" + eleValue);
+    	}
+    	
+    }
+    
+    public void verifySubmitImprovement() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(projectPageObjects.submitImprovement);
+    	Logger.logAndReportPass("submit improvement button is displayed succesfully.");
+    }
     
 }

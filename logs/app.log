@@ -1,14 +1,13 @@
-Fri Jul 29 14:11:16 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.Button[contains(@text,'English')] status = true
-Fri Jul 29 14:11:16 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on English language
-Fri Jul 29 14:11:48 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the continue button 
-Fri Jul 29 14:11:49 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.Button[contains(@text,'HT & Officials')] status = true
-Fri Jul 29 14:11:49 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on head teacher option
-Fri Jul 29 14:11:51 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on login button with diksha option
-Fri Jul 29 14:11:56 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.EditText[@resource-id="username"] status = true
-Fri Jul 29 14:11:58 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.EditText[@resource-id="password"] status = true
-Fri Jul 29 14:12:00 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.Button[@resource-id="login"] status = true
-Fri Jul 29 14:12:11 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the Project tab
-Fri Jul 29 14:12:14 IST 2022 INFO Logger-logAndReportInfo-95 Searched project is Lead the improvement
-Fri Jul 29 14:12:17 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: (//android.view.View)[29] status = true
-Fri Jul 29 14:12:17 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the first project
-Fri Jul 29 14:12:42 IST 2022 ERROR Gestures-click-76 None of the Element Selected Please check the Element Once: Located by By.xpath: //android.widget.Button[contains(@text,'share')]
+Mon Aug 01 17:19:27 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.chained({By.xpath: //android.widget.Button[@resource-id="com.android.chrome:id/terms_accept"]}) status = true
+Mon Aug 01 17:19:29 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.chained({By.xpath: //android.widget.Button[@resource-id="com.android.chrome:id/positive_button"]}) status = true
+Mon Aug 01 17:19:29 IST 2022 INFO Logger-logAndReportInfo-95 Google chrome browser is launched.
+Mon Aug 01 17:19:33 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.id: com.android.chrome:id/search_box_text status = true
+Mon Aug 01 17:19:43 IST 2022 INFO Logger-logAndReportInfo-95 Entered URL https://preprod.ntp.net.in/manage-learn/create-project/720fb9f1b5673ca6035905bb5470b893
+Mon Aug 01 17:19:46 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath:  //android.view.View[@content-desc="Start project"]/android.widget.Button status = true
+Mon Aug 01 17:19:46 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the start project. 
+Mon Aug 01 17:19:54 IST 2022 INFO Logger-logAndReportPass-110 Project view - Start improvement button is displayed succesfully.
+Mon Aug 01 17:19:55 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.view.View[@text='Task details'] status = true
+Mon Aug 01 17:19:55 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the task details tab
+Mon Aug 01 17:19:57 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.TextView[@text='Task 1'] status = true
+Mon Aug 01 17:19:57 IST 2022 INFO Logger-logAndReportInfo-95 clicked on the task1 details
+Mon Aug 01 17:19:59 IST 2022 INFO Logger-logAndReportPass-110 select status dropdown is in enabled modetrue

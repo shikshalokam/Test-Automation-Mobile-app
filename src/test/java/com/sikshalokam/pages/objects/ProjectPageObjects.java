@@ -122,6 +122,9 @@ public class ProjectPageObjects {
 	 @FindBy(xpath = "//android.widget.Button[@text='Start improvement']")
 	 public MobileElement startImprovement;
 	 
+	 @FindBy(xpath = "//android.widget.Button[@text='Submit improvement']")
+	 public MobileElement submitImprovement;
+	 
 	 @FindBy(xpath = "//android.widget.Button[contains(@text,'cloud download')]")
      public MobileElement downloadIcon;
     
@@ -166,4 +169,18 @@ public class ProjectPageObjects {
      
      @FindBy(xpath = "//android.view.View[@text='Project view']")
      public MobileElement projectViewTitle;
+     
+     @FindBy(xpath = "//android.view.View[@text='Project details']")     
+     public MobileElement projectDetailsTab;
+     
+     @FindBy(xpath = "//android.view.View[@text='Task details']")
+     public MobileElement taskDetailsTab;
+     
+     @FindBy(xpath = "//android.widget.TextView[@text='Task 1']")
+     public MobileElement task1;
+     
+     @FindBy(xpath = "//android.view.View[@text='Select Status']")
+     public MobileElement selectStatus;
+     
+     
 }

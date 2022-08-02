@@ -16,6 +16,7 @@ public class ObservationLinkTest {
     Map<String, String> loginPageTestData;
     Map<String, String> observationPageTestData;
     Map<String, String> observationLinkTestData;
+    Map<String, String> projectLinkTestData;
 
     public ChromeActions getChromeActions() throws Exception {
         return new ChromeActions();
@@ -143,4 +144,29 @@ public class ObservationLinkTest {
         
     }
 
+    @Test(description = "Project related scenarios and functionalities ")
+    @Author(name = "Manjunatha K")
+    public void verifyProjectPageAndDetails() throws Exception {
+        projectLinkTestData = TestData.getFullGoogleSheetDataAsMapString("ProjectLink!A:B");
+        getObservationPageActions().clickOnAcceptButton();
+        getChromeActions().enterUrl(projectLinkTestData.get("viewProject"));
+        getChromeActions().clickOnStartProject();
+        getProjectPageActions().verifyStartImprovementButton();
+        getProjectPageActions().clickOnTaskDetails();
+        getProjectPageActions().clickOnTask1();
+        getProjectPageActions().verifyNonEditModeInProject();
+//        Assert.assertEquals(isElementPresent(value1), false, "Field is editable");
+    }
+    
+    @Test(description = "Project related scenarios and functionalities ")
+    @Author(name = "Manjunatha K")
+    public void verifyProjectFeatures() throws Exception {
+        projectLinkTestData = TestData.getFullGoogleSheetDataAsMapString("ProjectLink!A:B");
+        getObservationPageActions().clickOnAcceptButton();
+        getChromeActions().enterUrl(projectLinkTestData.get("projectFeatures"));
+        getChromeActions().clickOnStartProject();
+        getProjectPageActions().clickOnStartImprovement();
+        getProjectPageActions().verifySubmitImprovement();
+        
+    }
 }
