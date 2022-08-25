@@ -1,13 +1,9 @@
-Mon Aug 01 17:19:27 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.chained({By.xpath: //android.widget.Button[@resource-id="com.android.chrome:id/terms_accept"]}) status = true
-Mon Aug 01 17:19:29 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.chained({By.xpath: //android.widget.Button[@resource-id="com.android.chrome:id/positive_button"]}) status = true
-Mon Aug 01 17:19:29 IST 2022 INFO Logger-logAndReportInfo-95 Google chrome browser is launched.
-Mon Aug 01 17:19:33 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.id: com.android.chrome:id/search_box_text status = true
-Mon Aug 01 17:19:43 IST 2022 INFO Logger-logAndReportInfo-95 Entered URL https://preprod.ntp.net.in/manage-learn/create-project/720fb9f1b5673ca6035905bb5470b893
-Mon Aug 01 17:19:46 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath:  //android.view.View[@content-desc="Start project"]/android.widget.Button status = true
-Mon Aug 01 17:19:46 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the start project. 
-Mon Aug 01 17:19:54 IST 2022 INFO Logger-logAndReportPass-110 Project view - Start improvement button is displayed succesfully.
-Mon Aug 01 17:19:55 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.view.View[@text='Task details'] status = true
-Mon Aug 01 17:19:55 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on the task details tab
-Mon Aug 01 17:19:57 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath: //android.widget.TextView[@text='Task 1'] status = true
-Mon Aug 01 17:19:57 IST 2022 INFO Logger-logAndReportInfo-95 clicked on the task1 details
-Mon Aug 01 17:19:59 IST 2022 INFO Logger-logAndReportPass-110 select status dropdown is in enabled modetrue
+Thu Aug 25 13:11:32 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.chained({By.xpath: //android.widget.Button[@resource-id="com.android.chrome:id/terms_accept"]}) status = true
+Thu Aug 25 13:11:33 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.chained({By.xpath: //android.widget.Button[@resource-id="com.android.chrome:id/positive_button"]}) status = true
+Thu Aug 25 13:11:33 IST 2022 INFO Logger-logAndReportInfo-95 Google chrome browser is launched.
+Thu Aug 25 13:11:35 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.id: com.android.chrome:id/search_box_text status = true
+Thu Aug 25 13:11:46 IST 2022 INFO Logger-logAndReportInfo-95 Entered URL https://preprod.ntp.net.in/manage-learn/create-observation/0bdf7574988153eb6814d5a40746aeac
+Thu Aug 25 13:11:51 IST 2022 INFO Gestures-click-79 Method: click for locator = Located by By.xpath:  //android.view.View[@content-desc="Start Observation"]/android.widget.Button status = true
+Thu Aug 25 13:11:51 IST 2022 INFO Logger-logAndReportInfo-95 Clicked on Start observation 
+Thu Aug 25 13:12:06 IST 2022 INFO Logger-logAndReportPass-110 Question map  is displayed succesfully
+Thu Aug 25 13:12:12 IST 2022 INFO Logger-logAndReportInfo-95 Scrolled to the 5th question

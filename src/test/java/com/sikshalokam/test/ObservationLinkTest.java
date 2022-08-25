@@ -149,11 +149,11 @@ public class ObservationLinkTest {
     public void verifyProjectPageAndDetails() throws Exception {
         projectLinkTestData = TestData.getFullGoogleSheetDataAsMapString("ProjectLink!A:B");
         getObservationPageActions().clickOnAcceptButton();
-        getChromeActions().enterUrl(projectLinkTestData.get("viewProject"));
+        getChromeActions().enterUrl(projectLinkTestData.get("projectPageAndDetails"));
         getChromeActions().clickOnStartProject();
-        getProjectPageActions().verifyStartImprovementButton();
+        getProjectPageActions().verifySubmitImprovement();
         getProjectPageActions().clickOnTaskDetails();
-        getProjectPageActions().clickOnTask1();
+        getProjectPageActions().clickOnTask2();
         getProjectPageActions().verifyNonEditModeInProject();
 //        Assert.assertEquals(isElementPresent(value1), false, "Field is editable");
     }
@@ -165,8 +165,10 @@ public class ObservationLinkTest {
         getObservationPageActions().clickOnAcceptButton();
         getChromeActions().enterUrl(projectLinkTestData.get("projectFeatures"));
         getChromeActions().clickOnStartProject();
-        getProjectPageActions().clickOnStartImprovement();
+        //getProjectPageActions().clickOnStartImprovement();
         getProjectPageActions().verifySubmitImprovement();
-        
+        getProjectPageActions().clickOnShareButton();
+        getProjectPageActions().clickOnSyncAndShare();
+        getProjectPageActions().verifySubmitImprovement();
     }
 }

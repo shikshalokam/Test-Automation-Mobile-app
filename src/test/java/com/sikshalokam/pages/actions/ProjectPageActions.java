@@ -156,6 +156,7 @@ public class ProjectPageActions {
     }
     
     public void clickOnEditIconOnProject() throws Exception {
+    	Thread.sleep(2000);
     	SikshaLokamClient.get().gestures().click(projectPageObjects.editIcon);
     	Logger.logAndReportInfo("Clicked on the edit icon in project");
     }
@@ -175,9 +176,9 @@ public class ProjectPageActions {
     	Logger.logAndReportInfo("Clicked on the task details tab");
     }
     
-    public void clickOnTask1() throws Exception {
-    	SikshaLokamClient.get().gestures().click(projectPageObjects.task1);
-    	Logger.logAndReportInfo("clicked on the task1 details");
+    public void clickOnTask2() throws Exception {
+    	SikshaLokamClient.get().gestures().click(projectPageObjects.task2);
+    	Logger.logAndReportInfo("clicked on the task2 details");
     }
     
     

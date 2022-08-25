@@ -7,8 +7,10 @@ import org.testng.annotations.Test;
 import com.sikshalokam.annotation.Author;
 import com.sikshalokam.pages.actions.ChromeActions;
 import com.sikshalokam.pages.actions.HomePageActions;
+import com.sikshalokam.pages.actions.LoginPageAction;
 import com.sikshalokam.pages.actions.ObservationPageActions;
 import com.sikshalokam.pages.actions.ProjectPageActions;
+import com.sikshalokam.test.LoginPageTest;
 import com.sikshalokam.utils.gSheet.TestData;
 
 public class ObservationLinkTest {
@@ -33,11 +35,23 @@ public class ObservationLinkTest {
     	return new HomePageActions();
     }
     
+    public LoginPageAction getLoginPageActions() throws Exception {
+        return new LoginPageAction();
+    }
+    
+    public LoginPageTest getLoginPageTest() throws Exception {
+    	return new LoginPageTest();
+    }
+    
     @Test(description = "Verify Observation link from chrome ")
     @Author(name = "Manjunatha Kumar")
     public void verifyObservationTab() throws Exception {
         observationLinkTestData = TestData.getFullGoogleSheetDataAsMapString("ObservationLink!A:B");
-        getChromeActions().clickUrl(observationLinkTestData.get("url"));
+        getLoginPageTest().loginToApplication();
+        //getChromeActions().clickUrl(observationLinkTestData.get("url"));
+        
+        Thread.sleep(10000);
+        //getHomePageActions().
         /** getChromeActions().clickOnStartObservation();
         getObservationPageActions().clickOnFirstEntity();
         getObservationPageActions().clickOnObservation1();

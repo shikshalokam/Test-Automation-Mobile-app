@@ -43,11 +43,24 @@ public class LoginPageTest {
         getLoginPageActions().clickOnEnglish();
         getLoginPageActions().clickOnContinue();
         getLoginPageActions().clickOnTeacherOption();
-        getLoginPageActions().clickOnLoginWithDikshaOption();
+        getLoginPageActions().clickOnSelectBoardDropdown();
+        getLoginPageActions().selectCBSEBoard();
+        getLoginPageActions().clickOnSubmitButtonForBoarding();
+        getLoginPageActions().clickOnSelectMediumDropdown();
+        getLoginPageActions().selectEnglishMedium();
+        getLoginPageActions().clickOnSubmitButtonForBoarding();
+        getLoginPageActions().clickOnClassDropdown();
+        getLoginPageActions().selectClass5();
+        getLoginPageActions().clickOnSubmitButtonForBoarding();
+        getLoginPageActions().clickOnContinueForBoarding();
+        getLoginPageActions().clickOnSwitchToNewExperience();
+        getLoginPageActions().verifyHambergerMenu();
+        
+        /**getLoginPageActions().clickOnLoginWithDikshaOption();
         getLoginPageActions().enterUserName(loginPageTestData.get("userName"));
         getLoginPageActions().enterPassword(loginPageTestData.get("password"));
         getLoginPageActions().clickOnLoginButton();
-        getLoginPageActions().verifyHomePage();
+        getLoginPageActions().verifyHomePage();**/
 
     }
     
@@ -67,7 +80,7 @@ public class LoginPageTest {
     }
 
 
-    @Test(description = "login to application")
+    @Test(description = "login to application with invalid Credentials")
     @Author(name = "Sunil H N")
     public void loginToApplicationWithInvalidCred() throws Exception {
         loginPageTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTest!A:B");
@@ -111,7 +124,7 @@ public class LoginPageTest {
         SikshaLokamClient.get().getScreenShot().screenshot();
     }
 
-    @Test(description = "register application")
+    @Test(description = "login to application and verify all the tiles available on home page")
     @Author(name = "Manjunath Kumar")
     public void loginAndVerifyAllTiles() throws Exception {
     	loginToApplication();
@@ -139,10 +152,44 @@ public class LoginPageTest {
         nameForCredential = loginPageTestData.get("nameForRegister") + RandomStringUtils.randomAlphabetic(3);
         getLoginPageActions().enterNameForRegister(nameForCredential); //if name should be unique - need to add random alphabets or numbers
         getLoginPageActions().enterDOBForRegister(loginPageTestData.get("dateOfBirth"));
-        //getLoginPageActions().selectDateOfBirthYearToRegister();
         getLoginPageActions().clickOnContinueButtonForRegistration();
         getLoginPageActions().verifyContentForRegister();
-        getLoginPageActions().clickOnRoleToRegisterDropdwn();
+       // getLoginPageActions().clickOnRoleToRegisterDropdwn(); not available in preprod
+       // getLoginPageActions().selectHTAndOfficialRoleToRegister();
+        getLoginPageActions().clickOnStateToRegisterDropdwn();
+        getLoginPageActions().swipeUpToUttarPradeshState();
+        getLoginPageActions().selectUttarPradeshStateToRegister();
+       // getLoginPageActions().clickOnsubRoleToRegister();
+       // getLoginPageActions().selectHMSubRoletoRegister();
+        getLoginPageActions().clickOnDistictToRegisterDropdwn();
+        getLoginPageActions().selectAgraDistrictToRegister();
+        getLoginPageActions().clickOnSubmitButtonToContentSubmission();
+        mobileNumber = loginPageTestData.get("randomMobileNo") + RandomStringUtils.randomNumeric(5);
+        getLoginPageActions().enterMobileNumberForRegister(mobileNumber);
+        getLoginPageActions().enterPasswordForRegister(loginPageTestData.get("passwordForRegister"));
+        getLoginPageActions().enterConfirmPasswordForRegister(loginPageTestData.get("confirmPasswordForRegister"));
+        getLoginPageActions().clickOnSubmitButtonToRegister();
+        Thread.sleep(5000);
+        getLoginPageActions().verifyOtpPage();
+    }
+    
+    @Test(description = "register application and check fields")
+    @Author(name="Manjunath Kumar")
+    public void stagingRegistration() throws Exception {
+    	
+    	loginPageTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTest!A:B");
+        getLoginPageActions().clickOnEnglish();
+        getLoginPageActions().clickOnContinue();
+        getLoginPageActions().clickOnHeadTeacherOption();
+        getLoginPageActions().clickOnLoginWithDikshaOption();
+        getLoginPageActions().clickonRegister();
+    	//getLoginPageActions().verifyRegisterPageTitle();
+        nameForCredential = loginPageTestData.get("nameForRegister") + RandomStringUtils.randomAlphabetic(3);
+        getLoginPageActions().enterNameForRegister(nameForCredential); //if name should be unique - need to add random alphabets or numbers
+        getLoginPageActions().enterDOBForRegister(loginPageTestData.get("dateOfBirth"));
+        getLoginPageActions().clickOnContinueButtonForRegistration();
+        getLoginPageActions().verifyContentForRegister();
+        getLoginPageActions().clickOnRoleToRegisterDropdwn();// not available in preprod
         getLoginPageActions().selectHTAndOfficialRoleToRegister();
         getLoginPageActions().clickOnStateToRegisterDropdwn();
         getLoginPageActions().swipeUpToUttarPradeshState();
@@ -154,7 +201,6 @@ public class LoginPageTest {
         getLoginPageActions().clickOnSubmitButtonToContentSubmission();
         mobileNumber = loginPageTestData.get("randomMobileNo") + RandomStringUtils.randomNumeric(5);
         getLoginPageActions().enterMobileNumberForRegister(mobileNumber);
-        //getLoginPageActions().swipeUpToConfirmPassword();
         getLoginPageActions().enterPasswordForRegister(loginPageTestData.get("passwordForRegister"));
         getLoginPageActions().enterConfirmPasswordForRegister(loginPageTestData.get("confirmPasswordForRegister"));
         getLoginPageActions().clickOnSubmitButtonToRegister();

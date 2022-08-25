@@ -108,6 +108,8 @@ public class LoginPageAction {
     }
 
     public void clickOnSubmitButtonToRegister() throws Exception {
+        Thread.sleep(20000);
+    	SikshaLokamClient.get().gestures().hideKeyBoard();
         SikshaLokamClient.get().gestures().click(loginPageObjects.submitButtonToRegister);
         Logger.logAndReportInfo("Clicked on the Register button on register page ");
     }
@@ -179,9 +181,10 @@ public class LoginPageAction {
 
  // enter date of birth year to register form
     public void enterDOBForRegister(String dateOfBirthYear) throws Exception {
-        // SikshaLokamClient.get().gestures().click(loginPageObjects.nameToRegister);
+        SikshaLokamClient.get().gestures().click(loginPageObjects.nameToRegister);
         SikshaLokamClient.get().gestures().sendValueToTextBox(loginPageObjects.yearOfBirthToRegister, dateOfBirthYear);
         Logger.logAndReportInfo("entered Date of birth year for registration form : " + dateOfBirthYear);
+        Thread.sleep(10000);
     }
     
     public void selectDateOfBirthYearToRegister() throws Exception {
@@ -228,8 +231,11 @@ public class LoginPageAction {
     public void enterConfirmPasswordForRegister(String confirmPassword) throws Exception {
         //SikshaLokamClient.get().gestures().click(loginPageObjects.confirmPasswordToRegister);
         SikshaLokamClient.get().gestures().sendValueToTextBox(loginPageObjects.confirmPasswordToRegister, confirmPassword);
+        //SikshaLokamClient.get().gestures().hideKeyBoard();
         Logger.logAndReportInfo("entered confirm password for registration form : " + confirmPassword);
-       // SikshaLokamClient.get().gestures().hideKeyBoard();
+        Thread.sleep(25000);
+        SikshaLokamClient.get().gestures().click(loginPageObjects.confirmPasswordToRegister);
+        SikshaLokamClient.get().gestures().hideKeyBoard();
     }
     
     public void clickOnProgramsTile() throws Exception {
@@ -292,6 +298,57 @@ public class LoginPageAction {
     	SikshaLokamClient.get().gestures().click(loginPageObjects.submitButtonForContentSubmission);
     	Logger.logAndReportInfo("Clicked on the submit button for content submission to register");
     }
+    
+    public void clickOnSelectBoardDropdown() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.selectBoardDropdown);
+    	Logger.logAndReportInfo("Clicked on the select board dropdown");
+    }
+    
+    public void selectCBSEBoard() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.cbseRadioButton);
+    	Logger.logAndReportInfo("Selected the CBSE radio button " );
+    }
+    
+    public void clickOnSubmitButtonForBoarding() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.submitButtonForBoarding);
+    	Logger.logAndReportInfo("Clicked on the submit button for boarding.");
+    }
+    
+    public void clickOnSelectMediumDropdown() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.selectMedium);
+    	Logger.logAndReportInfo("Clicked on the select medium dropdown.");
+    }
+    
+    public void selectEnglishMedium() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.englishMedium);
+    	Logger.logAndReportInfo("Selected english language.");
+    }
+    
+    public void clickOnClassDropdown() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.selectClass);
+    	Logger.logAndReportInfo("Clicked on the select class dropdown");
+    }
+    
+    public void selectClass5() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.class5);
+    	Logger.logAndReportInfo("selected class 5");
+    }
+    
+    public void clickOnContinueForBoarding() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.continueButtonForBoarding);
+    	Logger.logAndReportInfo("Clicked on the Continue button for boarding.");
+    }
+    
+    public void clickOnSwitchToNewExperience() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.switchToNewExperience);
+    	Logger.logAndReportInfo("Clicked on the switch to new experience button ");
+    }
+    
+    public void clickOnReportsTile() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.reportsTile);
+    	Logger.logAndReportInfo("Clicked on the reports tile. ");
+    }
+    
     //****************************Verify******************************************//
     
     public void verifyOtpPage() throws Exception {
@@ -332,5 +389,10 @@ public class LoginPageAction {
     public void verifyProgramsTitle() throws Exception {
     	SikshaLokamClient.get().gestures().isDisplayed(loginPageObjects.programsTitle);
     	Logger.logAndReportPass("Programs title is displayed succesfully");
+    }
+    
+    public void verifyHambergerMenu() throws Exception {
+    	SikshaLokamClient.get().gestures().isDisplayed(loginPageObjects.hambergerMenu);
+    	Logger.logAndReportPass("Hamberger menu is displayed succesfully");
     }
 }

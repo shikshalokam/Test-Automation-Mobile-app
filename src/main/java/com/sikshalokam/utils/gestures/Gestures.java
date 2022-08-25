@@ -204,7 +204,7 @@ public class Gestures {
 
     // New
 
-    private boolean isElementPresent(WebElement locator) {
+    public boolean isElementPresent(WebElement locator) {
         try {
             waitForElementToAppear(locator);
             if (locator.isDisplayed())
@@ -413,5 +413,9 @@ public class Gestures {
         } catch (Exception e) {
             System.out.println("Unable to TurnOn MobileData");
         }
+    }
+    
+    public void switchToWhatsapp() {
+    	
     }
 }

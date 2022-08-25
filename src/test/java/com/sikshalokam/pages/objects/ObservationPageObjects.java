@@ -2,6 +2,8 @@ package com.sikshalokam.pages.objects;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 
 public class ObservationPageObjects {
@@ -58,7 +60,10 @@ public class ObservationPageObjects {
     @FindBy(xpath = "//android.widget.Button[@text='Completed']")
     public MobileElement completed;
 
-    @FindBy(xpath = "//android.widget.Button[@text='Observe again']")
+    @FindAll({
+    	@FindBy(xpath = "//android.widget.Button[@text='Observe again']"),
+    	@FindBy(xpath = "//android.widget.Button[@text='Observe Again']")
+	})
     public MobileElement observeAgain;
 
     @FindBy(xpath = "//android.widget.Button[@text='View entity report']")

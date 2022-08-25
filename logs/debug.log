@@ -1,43 +1,117 @@
-Mon Aug 01 17:18:57 IST 2022 INFO TestListeners-onStart-78 *********************onStart********************* mode null
-Mon Aug 01 17:18:57 IST 2022 INFO GlobalSession-get-23 On GetAppiumManger Global
-Mon Aug 01 17:18:57 IST 2022 INFO GlobalSession-setAppiumManager-32 SetAppiumManager Global
-Mon Aug 01 17:18:57 IST 2022 INFO TestListeners-onStart-86 Running in local
-Mon Aug 01 17:18:58 IST 2022 INFO AppiumManagerUtils-getAppiumJSPath-93 StdInput java.io.BufferedReader@158d255c
-Mon Aug 01 17:18:58 IST 2022 INFO AppiumManagerUtils-getAppiumJSPath-122 actualJSPath :C:\Users\T460s\AppData\Roaming\npm\node_modules\appium\build\lib\main.js
-Mon Aug 01 17:18:58 IST 2022 INFO AppiumManagerUtils-getNodePath-42 where Appium : where node
-Mon Aug 01 17:18:58 IST 2022 INFO AppiumManagerUtils-getNodePath-45 Reader - java.io.BufferedReader@2ca65ce4
-Mon Aug 01 17:18:59 IST 2022 INFO AppiumManagerUtils-getNodePath-74 nodePath :C:\Program Files\nodejs\node.exe
-Mon Aug 01 17:19:03 IST 2022 INFO AppiumManager-startServer-84 Appium Server Started
-Mon Aug 01 17:19:03 IST 2022 INFO AppiumManager-startServer-87 Endpoint http://127.0.0.1:1289/wd/hub
-Mon Aug 01 17:19:03 IST 2022 INFO AppiumManager-startServer-88 **************************************************************
-Mon Aug 01 17:19:03 IST 2022 INFO AppiumManager-startServer-89 $$$$$$$$$$$$$$$$$$$$$ APPIUM SERVER STARTED $$$$$$$$$$$$$$$$$$
-Mon Aug 01 17:19:03 IST 2022 INFO AppiumManager-startServer-90 **************************************************************
-Mon Aug 01 17:19:03 IST 2022 INFO ExtentTestManager-InitReport-23 On InitReports
-Mon Aug 01 17:19:03 IST 2022 INFO ExtentManager-getExtent-23 On GetExtent
-Mon Aug 01 17:19:03 IST 2022 INFO TestListeners-onTestStart-34 ObservationLinkTest
-Mon Aug 01 17:19:03 IST 2022 INFO TestListeners-onTestStart-35 *********************onTestStart********************* projectScenarios
-Mon Aug 01 17:19:03 IST 2022 INFO GlobalSession-get-23 On GetAppiumManger Global
-Mon Aug 01 17:19:03 IST 2022 INFO AppiumManager-createDriver-50 On Create Driver...
-Mon Aug 01 17:19:03 IST 2022 INFO AppiumManager-setLocalCapabilities-122 On setLocalCapabilities
-Mon Aug 01 17:19:04 IST 2022 INFO AppiumManager-setLocalCapabilities-132 Running in Windows
-Mon Aug 01 17:19:04 IST 2022 INFO AppiumManager-setLocalCapabilities-138 *************** Desired Capabilities ******************:
-Mon Aug 01 17:19:04 IST 2022 INFO AppiumManager-setLocalCapabilities-139 Capabilities {appActivity: com.google.android.apps.chr..., appPackage: com.android.chrome, autoGrantPermissions: true, automationName: UIAutomator2, chromedriverExecutable: E:\SikshaLokam\SL Workspace..., deviceName: emulator-5554, launchTimeout: 90000, newCommandTimeout: 9000, platformName: Android, platformVersion: 12}
-Mon Aug 01 17:19:04 IST 2022 INFO AppiumManager-setLocalCapabilities-140 *************** Desired Capabilities ******************:
-Mon Aug 01 17:19:04 IST 2022 INFO AppiumManager-setDriver-101 selected Mode On SetDriverlocal
-Mon Aug 01 17:19:04 IST 2022 INFO AppiumManager-setDriver-102 ***********************Running in LOCAL*****************************
-Mon Aug 01 17:19:04 IST 2022 INFO AppiumManager-setDriver-103 endpoint http://127.0.0.1:1289/wd/hub
-Mon Aug 01 17:19:24 IST 2022 INFO AppiumManager-setDriverToThreadLocal-40 On SetDriverToThreadLocal
-Mon Aug 01 17:19:24 IST 2022 INFO AppiumManager-getAppiumDriver-45 On GetAppiumDriver
-Mon Aug 01 17:19:24 IST 2022 INFO SikshaLokamClient-<init>-35 On Constructor SikshaLokamClient
-Mon Aug 01 17:19:24 IST 2022 INFO SikshaLokamClient-setSikshaLokamClient-40 On SetGoodWorkerClient
-Mon Aug 01 17:19:26 IST 2022 INFO SikshaLokamClient-gestures-108 On Gestures
-Mon Aug 01 17:19:27 IST 2022 INFO SikshaLokamClient-logger-77 On GetLogUtlis
-Mon Aug 01 17:19:59 IST 2022 INFO TestListeners-onTestSuccess-51 @onTestSuccess
-Mon Aug 01 17:19:59 IST 2022 INFO GlobalSession-get-23 On GetAppiumManger Global
-Mon Aug 01 17:19:59 IST 2022 INFO AppiumManager-quitDriver-148 On QuitDriver
-Mon Aug 01 17:20:00 IST 2022 INFO AppiumManager-quitDriver-151 ***************************QUTTING**************************
-Mon Aug 01 17:20:00 IST 2022 INFO TestListeners-onFinish-103 *********************onFinish*********************
-Mon Aug 01 17:20:00 IST 2022 INFO GlobalSession-get-23 On GetAppiumManger Global
-Mon Aug 01 17:20:00 IST 2022 INFO AppiumManager-stopAppiumServer-114 **************************************************************
-Mon Aug 01 17:20:00 IST 2022 INFO AppiumManager-stopAppiumServer-115 $$$$$$$$$$$$$$$$$$$$$ APPIUM SERVER STOPPED $$$$$$$$$$$$$$$$$$
-Mon Aug 01 17:20:00 IST 2022 INFO AppiumManager-stopAppiumServer-116 **************************************************************
+Thu Aug 25 13:08:15 IST 2022 INFO TestListeners-onStart-78 *********************onStart********************* mode null
+Thu Aug 25 13:08:15 IST 2022 INFO GlobalSession-get-23 On GetAppiumManger Global
+Thu Aug 25 13:08:15 IST 2022 INFO GlobalSession-setAppiumManager-32 SetAppiumManager Global
+Thu Aug 25 13:08:15 IST 2022 INFO TestListeners-onStart-86 Running in local
+Thu Aug 25 13:08:15 IST 2022 INFO AppiumManagerUtils-getAppiumJSPath-93 StdInput java.io.BufferedReader@5707c1cb
+Thu Aug 25 13:08:15 IST 2022 INFO AppiumManagerUtils-getAppiumJSPath-122 actualJSPath :C:\Users\T460s\AppData\Roaming\npm\node_modules\appium\build\lib\main.js
+Thu Aug 25 13:08:15 IST 2022 INFO AppiumManagerUtils-getNodePath-42 where Appium : where node
+Thu Aug 25 13:08:15 IST 2022 INFO AppiumManagerUtils-getNodePath-45 Reader - java.io.BufferedReader@2b5cb9b2
+Thu Aug 25 13:08:15 IST 2022 INFO AppiumManagerUtils-getNodePath-74 nodePath :C:\Program Files\nodejs\node.exe
+Thu Aug 25 13:08:17 IST 2022 INFO AppiumManager-startServer-84 Appium Server Started
+Thu Aug 25 13:08:17 IST 2022 INFO AppiumManager-startServer-87 Endpoint http://127.0.0.1:6456/wd/hub
+Thu Aug 25 13:08:17 IST 2022 INFO AppiumManager-startServer-88 **************************************************************
+Thu Aug 25 13:08:17 IST 2022 INFO AppiumManager-startServer-89 $$$$$$$$$$$$$$$$$$$$$ APPIUM SERVER STARTED $$$$$$$$$$$$$$$$$$
+Thu Aug 25 13:08:17 IST 2022 INFO AppiumManager-startServer-90 **************************************************************
+Thu Aug 25 13:08:17 IST 2022 INFO ExtentTestManager-InitReport-23 On InitReports
+Thu Aug 25 13:08:17 IST 2022 INFO ExtentManager-getExtent-23 On GetExtent
+Thu Aug 25 13:08:17 IST 2022 INFO TestListeners-onTestStart-34 ObservationLinkTest
+Thu Aug 25 13:08:17 IST 2022 INFO TestListeners-onTestStart-35 *********************onTestStart********************* downloadAndDeleteProject
+Thu Aug 25 13:08:17 IST 2022 INFO GlobalSession-get-23 On GetAppiumManger Global
+Thu Aug 25 13:08:17 IST 2022 INFO AppiumManager-createDriver-50 On Create Driver...
+Thu Aug 25 13:08:17 IST 2022 INFO AppiumManager-setLocalCapabilities-122 On setLocalCapabilities
+Thu Aug 25 13:08:17 IST 2022 INFO AppiumManager-setLocalCapabilities-132 Running in Windows
+Thu Aug 25 13:08:17 IST 2022 INFO AppiumManager-setLocalCapabilities-138 *************** Desired Capabilities ******************:
+Thu Aug 25 13:08:17 IST 2022 INFO AppiumManager-setLocalCapabilities-139 Capabilities {appActivity: com.google.android.apps.chr..., appPackage: com.android.chrome, autoGrantPermissions: true, automationName: UIAutomator2, chromedriverExecutable: E:\SikshaLokam\SL Workspace..., deviceName: emulator-5554, launchTimeout: 90000, newCommandTimeout: 9000, platformName: Android, platformVersion: 12}
+Thu Aug 25 13:08:17 IST 2022 INFO AppiumManager-setLocalCapabilities-140 *************** Desired Capabilities ******************:
+Thu Aug 25 13:08:17 IST 2022 INFO AppiumManager-setDriver-101 selected Mode On SetDriverlocal
+Thu Aug 25 13:08:17 IST 2022 INFO AppiumManager-setDriver-102 ***********************Running in LOCAL*****************************
+Thu Aug 25 13:08:17 IST 2022 INFO AppiumManager-setDriver-103 endpoint http://127.0.0.1:6456/wd/hub
+Thu Aug 25 13:08:31 IST 2022 INFO AppiumManager-setDriverToThreadLocal-40 On SetDriverToThreadLocal
+Thu Aug 25 13:08:31 IST 2022 INFO AppiumManager-getAppiumDriver-45 On GetAppiumDriver
+Thu Aug 25 13:08:31 IST 2022 INFO SikshaLokamClient-<init>-35 On Constructor SikshaLokamClient
+Thu Aug 25 13:08:31 IST 2022 INFO SikshaLokamClient-setSikshaLokamClient-40 On SetGoodWorkerClient
+Thu Aug 25 13:08:32 IST 2022 INFO SikshaLokamClient-gestures-108 On Gestures
+Thu Aug 25 13:08:33 IST 2022 INFO SikshaLokamClient-logger-77 On GetLogUtlis
+Thu Aug 25 13:09:20 IST 2022 ERROR TestListeners-onTestFailure-62 OnTestFailure
+Thu Aug 25 13:09:20 IST 2022 ERROR TestListeners-onTestFailure-63 java.lang.AssertionError: ***Method: click: Exception occured for locator= Can't locate an element by this strategy: By.xpath: //android.widget.Button[contains(@text,'cloud download')] expected [true] but found [false]
+Thu Aug 25 13:09:20 IST 2022 INFO SikshaLokamClient-getScreenShot-94 on GetScreenShot
+Thu Aug 25 13:09:20 IST 2022 INFO GlobalSession-get-23 On GetAppiumManger Global
+Thu Aug 25 13:09:20 IST 2022 INFO AppiumManager-quitDriver-148 On QuitDriver
+Thu Aug 25 13:09:21 IST 2022 INFO AppiumManager-quitDriver-151 ***************************QUTTING**************************
+Thu Aug 25 13:09:21 IST 2022 INFO TestListeners-onTestStart-34 ObservationLinkTest
+Thu Aug 25 13:09:21 IST 2022 INFO TestListeners-onTestStart-35 *********************onTestStart********************* verifyProjectFeatures
+Thu Aug 25 13:09:21 IST 2022 INFO GlobalSession-get-23 On GetAppiumManger Global
+Thu Aug 25 13:09:21 IST 2022 INFO AppiumManager-createDriver-50 On Create Driver...
+Thu Aug 25 13:09:21 IST 2022 INFO AppiumManager-setLocalCapabilities-122 On setLocalCapabilities
+Thu Aug 25 13:09:21 IST 2022 INFO AppiumManager-setLocalCapabilities-132 Running in Windows
+Thu Aug 25 13:09:21 IST 2022 INFO AppiumManager-setLocalCapabilities-138 *************** Desired Capabilities ******************:
+Thu Aug 25 13:09:21 IST 2022 INFO AppiumManager-setLocalCapabilities-139 Capabilities {appActivity: com.google.android.apps.chr..., appPackage: com.android.chrome, autoGrantPermissions: true, automationName: UIAutomator2, chromedriverExecutable: E:\SikshaLokam\SL Workspace..., deviceName: emulator-5554, launchTimeout: 90000, newCommandTimeout: 9000, platformName: Android, platformVersion: 12}
+Thu Aug 25 13:09:21 IST 2022 INFO AppiumManager-setLocalCapabilities-140 *************** Desired Capabilities ******************:
+Thu Aug 25 13:09:21 IST 2022 INFO AppiumManager-setDriver-101 selected Mode On SetDriverlocal
+Thu Aug 25 13:09:21 IST 2022 INFO AppiumManager-setDriver-102 ***********************Running in LOCAL*****************************
+Thu Aug 25 13:09:21 IST 2022 INFO AppiumManager-setDriver-103 endpoint http://127.0.0.1:6456/wd/hub
+Thu Aug 25 13:09:34 IST 2022 INFO AppiumManager-setDriverToThreadLocal-40 On SetDriverToThreadLocal
+Thu Aug 25 13:09:34 IST 2022 INFO AppiumManager-getAppiumDriver-45 On GetAppiumDriver
+Thu Aug 25 13:09:34 IST 2022 INFO SikshaLokamClient-<init>-35 On Constructor SikshaLokamClient
+Thu Aug 25 13:09:34 IST 2022 INFO SikshaLokamClient-setSikshaLokamClient-40 On SetGoodWorkerClient
+Thu Aug 25 13:09:36 IST 2022 INFO SikshaLokamClient-gestures-108 On Gestures
+Thu Aug 25 13:09:38 IST 2022 INFO SikshaLokamClient-logger-77 On GetLogUtlis
+Thu Aug 25 13:10:31 IST 2022 ERROR TestListeners-onTestFailure-62 OnTestFailure
+Thu Aug 25 13:10:31 IST 2022 ERROR TestListeners-onTestFailure-63 org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.xpath: //android.widget.Button[@text='Submit improvement']
+Thu Aug 25 13:10:31 IST 2022 INFO SikshaLokamClient-getScreenShot-94 on GetScreenShot
+Thu Aug 25 13:10:32 IST 2022 INFO GlobalSession-get-23 On GetAppiumManger Global
+Thu Aug 25 13:10:32 IST 2022 INFO AppiumManager-quitDriver-148 On QuitDriver
+Thu Aug 25 13:10:32 IST 2022 INFO AppiumManager-quitDriver-151 ***************************QUTTING**************************
+Thu Aug 25 13:10:32 IST 2022 INFO TestListeners-onTestStart-34 ObservationLinkTest
+Thu Aug 25 13:10:32 IST 2022 INFO TestListeners-onTestStart-35 *********************onTestStart********************* verifyProjectPageAndDetails
+Thu Aug 25 13:10:32 IST 2022 INFO GlobalSession-get-23 On GetAppiumManger Global
+Thu Aug 25 13:10:32 IST 2022 INFO AppiumManager-createDriver-50 On Create Driver...
+Thu Aug 25 13:10:32 IST 2022 INFO AppiumManager-setLocalCapabilities-122 On setLocalCapabilities
+Thu Aug 25 13:10:32 IST 2022 INFO AppiumManager-setLocalCapabilities-132 Running in Windows
+Thu Aug 25 13:10:32 IST 2022 INFO AppiumManager-setLocalCapabilities-138 *************** Desired Capabilities ******************:
+Thu Aug 25 13:10:32 IST 2022 INFO AppiumManager-setLocalCapabilities-139 Capabilities {appActivity: com.google.android.apps.chr..., appPackage: com.android.chrome, autoGrantPermissions: true, automationName: UIAutomator2, chromedriverExecutable: E:\SikshaLokam\SL Workspace..., deviceName: emulator-5554, launchTimeout: 90000, newCommandTimeout: 9000, platformName: Android, platformVersion: 12}
+Thu Aug 25 13:10:32 IST 2022 INFO AppiumManager-setLocalCapabilities-140 *************** Desired Capabilities ******************:
+Thu Aug 25 13:10:32 IST 2022 INFO AppiumManager-setDriver-101 selected Mode On SetDriverlocal
+Thu Aug 25 13:10:32 IST 2022 INFO AppiumManager-setDriver-102 ***********************Running in LOCAL*****************************
+Thu Aug 25 13:10:32 IST 2022 INFO AppiumManager-setDriver-103 endpoint http://127.0.0.1:6456/wd/hub
+Thu Aug 25 13:10:44 IST 2022 INFO AppiumManager-setDriverToThreadLocal-40 On SetDriverToThreadLocal
+Thu Aug 25 13:10:44 IST 2022 INFO AppiumManager-getAppiumDriver-45 On GetAppiumDriver
+Thu Aug 25 13:10:44 IST 2022 INFO SikshaLokamClient-<init>-35 On Constructor SikshaLokamClient
+Thu Aug 25 13:10:44 IST 2022 INFO SikshaLokamClient-setSikshaLokamClient-40 On SetGoodWorkerClient
+Thu Aug 25 13:10:45 IST 2022 INFO SikshaLokamClient-gestures-108 On Gestures
+Thu Aug 25 13:10:46 IST 2022 INFO SikshaLokamClient-logger-77 On GetLogUtlis
+Thu Aug 25 13:11:14 IST 2022 INFO TestListeners-onTestSuccess-51 @onTestSuccess
+Thu Aug 25 13:11:14 IST 2022 INFO GlobalSession-get-23 On GetAppiumManger Global
+Thu Aug 25 13:11:14 IST 2022 INFO AppiumManager-quitDriver-148 On QuitDriver
+Thu Aug 25 13:11:15 IST 2022 INFO AppiumManager-quitDriver-151 ***************************QUTTING**************************
+Thu Aug 25 13:11:15 IST 2022 INFO TestListeners-onTestStart-34 ObservationLinkTest
+Thu Aug 25 13:11:15 IST 2022 INFO TestListeners-onTestStart-35 *********************onTestStart********************* verifyQuestionsFormatsOnSubmssions
+Thu Aug 25 13:11:15 IST 2022 INFO GlobalSession-get-23 On GetAppiumManger Global
+Thu Aug 25 13:11:15 IST 2022 INFO AppiumManager-createDriver-50 On Create Driver...
+Thu Aug 25 13:11:15 IST 2022 INFO AppiumManager-setLocalCapabilities-122 On setLocalCapabilities
+Thu Aug 25 13:11:15 IST 2022 INFO AppiumManager-setLocalCapabilities-132 Running in Windows
+Thu Aug 25 13:11:15 IST 2022 INFO AppiumManager-setLocalCapabilities-138 *************** Desired Capabilities ******************:
+Thu Aug 25 13:11:15 IST 2022 INFO AppiumManager-setLocalCapabilities-139 Capabilities {appActivity: com.google.android.apps.chr..., appPackage: com.android.chrome, autoGrantPermissions: true, automationName: UIAutomator2, chromedriverExecutable: E:\SikshaLokam\SL Workspace..., deviceName: emulator-5554, launchTimeout: 90000, newCommandTimeout: 9000, platformName: Android, platformVersion: 12}
+Thu Aug 25 13:11:15 IST 2022 INFO AppiumManager-setLocalCapabilities-140 *************** Desired Capabilities ******************:
+Thu Aug 25 13:11:15 IST 2022 INFO AppiumManager-setDriver-101 selected Mode On SetDriverlocal
+Thu Aug 25 13:11:15 IST 2022 INFO AppiumManager-setDriver-102 ***********************Running in LOCAL*****************************
+Thu Aug 25 13:11:15 IST 2022 INFO AppiumManager-setDriver-103 endpoint http://127.0.0.1:6456/wd/hub
+Thu Aug 25 13:11:29 IST 2022 INFO AppiumManager-setDriverToThreadLocal-40 On SetDriverToThreadLocal
+Thu Aug 25 13:11:29 IST 2022 INFO AppiumManager-getAppiumDriver-45 On GetAppiumDriver
+Thu Aug 25 13:11:29 IST 2022 INFO SikshaLokamClient-<init>-35 On Constructor SikshaLokamClient
+Thu Aug 25 13:11:29 IST 2022 INFO SikshaLokamClient-setSikshaLokamClient-40 On SetGoodWorkerClient
+Thu Aug 25 13:11:30 IST 2022 INFO SikshaLokamClient-gestures-108 On Gestures
+Thu Aug 25 13:11:32 IST 2022 INFO SikshaLokamClient-logger-77 On GetLogUtlis
+Thu Aug 25 13:12:07 IST 2022 INFO Gestures-swipeUp-264 Trying to swipe up from x:490 y:1942, to x:490 y:457
+Thu Aug 25 13:12:10 IST 2022 INFO Gestures-swipeUp-264 Trying to swipe up from x:490 y:1942, to x:490 y:457
+Thu Aug 25 13:12:12 IST 2022 INFO SikshaLokamClient-getScreenShot-94 on GetScreenShot
+Thu Aug 25 13:12:12 IST 2022 INFO ScreenShot-screenshot-32 screenshot
+Thu Aug 25 13:12:12 IST 2022 INFO TestListeners-onTestSuccess-51 @onTestSuccess
+Thu Aug 25 13:12:12 IST 2022 INFO GlobalSession-get-23 On GetAppiumManger Global
+Thu Aug 25 13:12:12 IST 2022 INFO AppiumManager-quitDriver-148 On QuitDriver
+Thu Aug 25 13:12:13 IST 2022 INFO AppiumManager-quitDriver-151 ***************************QUTTING**************************
+Thu Aug 25 13:12:13 IST 2022 INFO TestListeners-onFinish-103 *********************onFinish*********************
+Thu Aug 25 13:12:13 IST 2022 INFO GlobalSession-get-23 On GetAppiumManger Global
+Thu Aug 25 13:12:13 IST 2022 INFO AppiumManager-stopAppiumServer-114 **************************************************************
+Thu Aug 25 13:12:13 IST 2022 INFO AppiumManager-stopAppiumServer-115 $$$$$$$$$$$$$$$$$$$$$ APPIUM SERVER STOPPED $$$$$$$$$$$$$$$$$$
+Thu Aug 25 13:12:13 IST 2022 INFO AppiumManager-stopAppiumServer-116 **************************************************************

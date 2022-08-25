@@ -1,5 +1,6 @@
 package com.sikshalokam.pages.objects;
 
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 
 import io.appium.java_client.MobileElement;
@@ -88,7 +89,10 @@ public class ProjectPageObjects {
 	 @FindBy(xpath = "//android.widget.Button[@text='Cancel']")
 	 public MobileElement cancelButton;
 	 
-	 @FindBy(xpath = "//android.widget.Button[@text='Create and continue']")
+	 @FindAll({
+		 @FindBy(xpath = "//android.widget.Button[@text='Create and continue']"),
+		 @FindBy(xpath = "//android.widget.Button[@text='Create and Continue']")
+	 })
 	 public MobileElement createAndContinueButton;
 	 
 	 @FindBy(xpath = "//android.widget.TextView[@text='Project Created']")
@@ -103,13 +107,19 @@ public class ProjectPageObjects {
 	 @FindBy(xpath = "//android.widget.TextView[contains(@text,'Your Project has been created successfully')]")
 	 public MobileElement succesMsg;
 	 
-	 @FindBy(xpath = "//android.widget.TextView[@text='View project']")
+	 @FindAll({
+		 @FindBy(xpath = "//android.widget.TextView[@text='View project']"),
+		 @FindBy(xpath = "//android.widget.TextView[@text='View Project']") 
+	 })
 	 public MobileElement viewProjectsButton;
 	 
 	 @FindBy(xpath = "//android.widget.TextView[contains(@text,'Your Project has been created successfully')]")
 	 public MobileElement successMsg;
 	 
-	 @FindBy(xpath = "//android.widget.Button[@text='View project']")
+	 @FindAll({
+		 @FindBy(xpath = "//android.widget.Button[@text='View project']"),
+		 @FindBy(xpath = "//android.widget.Button[@text='View Project']")
+	 })
 	 public MobileElement viewProjectsButtonoNPopup;
 	 
 	 //s is Capital inside text 
@@ -140,13 +150,13 @@ public class ProjectPageObjects {
      @FindBy(xpath = "//android.widget.Button[contains(@text,'checkmark circle')]")
      public MobileElement checkmarkDownloadIcon;
 	    
-     @FindBy(xpath = "(//android.view.View)[29]")
+     @FindBy(xpath = "(//android.view.View)[32]")
      public MobileElement firstSearchedProject;
      
-     @FindBy(xpath = "//android.widget.Button[contains(@text,'Dont sync')]")
+     @FindBy(xpath = "//android.widget.Button[contains(@text,'Dont Sync')]")
      public MobileElement dontSyncOption;
      
-     @FindBy(xpath = "//android.widget.Button[contains(@text,'Sync & share')]")
+     @FindBy(xpath = "//android.widget.Button[contains(@text,'Sync & Share')]")
      public MobileElement syncAndShareOption;
      
      @FindBy(xpath = "//android.widget.TextView[@text='Share']")
@@ -176,8 +186,8 @@ public class ProjectPageObjects {
      @FindBy(xpath = "//android.view.View[@text='Task details']")
      public MobileElement taskDetailsTab;
      
-     @FindBy(xpath = "//android.widget.TextView[@text='Task 1']")
-     public MobileElement task1;
+     @FindBy(xpath = "//android.widget.TextView[contains(@text,'Task 2')]")
+     public MobileElement task2;
      
      @FindBy(xpath = "//android.view.View[@text='Select Status']")
      public MobileElement selectStatus;

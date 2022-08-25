@@ -3,6 +3,7 @@ package com.sikshalokam.pages.objects;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPageObjects {
@@ -21,7 +22,37 @@ public class LoginPageObjects {
     @FindBy(xpath="//android.widget.Button[contains(@text,'Teacher')]")
     // previously it was Head Teacher & Officials
     public MobileElement TeacherOption;
+    
+    @FindBy(xpath = "//android.widget.Button[contains(@text,'Select Board')]")
+    public MobileElement selectBoardDropdown;
+    
+    @FindBy(xpath = "//android.widget.RadioButton[contains(@text,'CBSE')]")
+    public MobileElement cbseRadioButton;
+    
+    @FindBy(xpath = "//android.widget.Button[contains(@text,'Submit')]")
+    public MobileElement submitButtonForBoarding;
 
+    @FindBy(xpath = "(//android.view.View[contains(@text,'Select Medium')])[1]")
+    public MobileElement selectMedium; 
+    
+    @FindBy(xpath = "//android.widget.CheckBox[contains(@text,'English')]")
+    public MobileElement englishMedium;
+    
+    @FindBy(xpath = "(//android.view.View[contains(@text,'Select Class')])[1]")
+    public MobileElement selectClass; 
+    
+    @FindBy(xpath = "//android.widget.CheckBox[contains(@text,'Class 5')]")
+    public MobileElement class5;
+    
+    @FindBy(xpath="//android.widget.Button[contains(@text,'CONTINUE')]")
+    public MobileElement continueButtonForBoarding;
+    
+    @FindBy(xpath="//android.widget.Button[contains(@text,'SWITCH TO NEW EXPERIENCE')]")
+    public MobileElement switchToNewExperience;
+    
+    @FindBy(xpath="//android.widget.Button[contains(@text,'menu')]")
+    public MobileElement hambergerMenu;
+    
     @FindBy(xpath="//android.widget.TextView[contains(@text,'Login to DIKSHA')]")
     public MobileElement loginPageTitle;
     
@@ -73,7 +104,12 @@ public class LoginPageObjects {
     @FindBy(xpath="//android.view.View[@resource-id='persona']")
     public MobileElement roleToRegister;
     
-    @FindBy(xpath="//android.widget.TextView[@text='Head teacher & Official']")
+    @FindAll({
+    	@FindBy(xpath="//android.widget.TextView[@text='Head teacher & Official']"),
+    	@FindBy(xpath="//android.view.View[@text='School head OR Officials']")
+    })
+    
+//    @FindBy(xpath="//android.widget.TextView[@text='Head teacher & Official']")
     public MobileElement HTAndOfficialRoleOption;
     
     @FindBy(xpath="//android.view.View[@resource-id='subPersona']")
@@ -97,7 +133,7 @@ public class LoginPageObjects {
     @FindBy(xpath="//android.widget.TextView[@text='AGRA']")
     public MobileElement selectAgraDistrictToRegister;
     
-    @FindBy(xpath="//android.widget.Button[@text='SUBMIT']")
+    @FindBy(xpath="//android.widget.Button[contains(@text,'SUBMIT')]")
     public MobileElement submitButtonForContentSubmission;
     
     @FindBy(xpath="//android.view.View[contains(@text,'One Time Password')]")
