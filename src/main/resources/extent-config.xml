@@ -14,7 +14,7 @@
 		<protocol>https</protocol>
 
 		<!-- title of the document -->
-		<documentTitle>Sikshalokam</documentTitle>
+		<documentTitle>Shikshalokam</documentTitle>
 
 		<reportName>
 			<![CDATA[
@@ -23,7 +23,8 @@
 		]]>
 		</reportName>
 
-		<!-- report headline - displayed at top-nav, after reportHeadline D:\Project_Data\CoLive\Web_App\CodeBase\CoLive-Web\src\main\resources\qualitrix.png -->
+		<!-- report headline - displayed at top-nav, after reportHeadline
+		D:\Project_Data\CoLive\Web_App\CodeBase\CoLive-Web\src\main\resources\qualitrix.png -->
 		<reportHeadline>
 		<![CDATA[	
 			<marquee> Sikshalokam - Mobile Automation Suite Execution Report</marquee>

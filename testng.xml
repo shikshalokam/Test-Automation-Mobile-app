@@ -1,31 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="SikshaLokamTest">
+<suite name="ShikshaLokamTest">
 	<listeners>
-		<listener class-name="com.sikshalokam.listners.IAnnotation" />
-		<listener class-name="com.sikshalokam.listners.TestListeners" />
+		<listener class-name="com.shikshalokam.listners.IAnnotation" />
+		<listener class-name="com.shikshalokam.listners.TestListeners" />
 
 	</listeners>
 	<test thread-count="5" name="Test" preserve-order="true">
 		<classes>
-			<!-- <class name="com.sikshalokam.test.LoginPageTest"/>
-			<class name="com.sikshalokam.test.ObservationPageTest"/>
-			<class name="com.sikshalokam.test.ProjectPageTest"/>
-			<class name="com.sikshalokam.test.ProjectPageTestOffline"/> -->
-			
-			<class name="com.sikshalokam.test.ObservationLinkTest"/>
-			<class name="com.sikshalokam.test.OneTimeExecution"/> 
-			<class name="com.sikshalokam.test.ReportPageTest"/>
-			
-			<!-- <class name="com.sikshalokam.test.Staging.ObservationLinkTest"/>  -->
-			<!--  <class name="com.sikshalokam.test.LoginPageTest"/>
-			<class name="com.sikshalokam.test.ObservationLinkTest"/>
-			<class name="com.sikshalokam.test.ObservationPageTest"/>
+			<class name="com.shikshalokam.test.LoginPageTest" />
+		 <class name="com.shikshalokam.test.ProgramsPageTest" />
+
+			<class name="com.shikshalokam.test.ObservationPageTest" />
+			<class name="com.shikshalokam.test.ProjectPageTest" />
+			<class name="com.shikshalokam.test.ProjectPageTestOffline" />
+
+			<class name="com.shikshalokam.test.ObservationLinkTest" />
+			<class name="com.shikshalokam.test.OneTimeExecution" />
+			<class name="com.shikshalokam.test.ReportPageTest" />
+
+			<!-- <class
+			name="com.shikshalokam.test.Staging.ObservationLinkTest"/>  -->
+			<!--  <class name="com.shikshalokam.test.LoginPageTest"/>
+			<class name="com.shikshalokam.test.ObservationLinkTest"/>
+			<class name="com.shikshalokam.test.ObservationPageTest"/>
 			<class name="com.sik pshalokam.test.ProjectPageTest"/>
-			<class name="com.sikshalokam.test.ProjectPageTestOffline"/>
+			<class name="com.shikshalokam.test.ProjectPageTestOffline"/>
 			 -->
-			
+
 		</classes>
-	</test> <!-- Test -->
-</suite> <!-- Suite -->
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->
+
+
+
+
+
+
+
+
+
  

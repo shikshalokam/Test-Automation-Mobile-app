@@ -1,12 +1,12 @@
 [
-  {
+ {
     "name": "local",
     "caps": {
       "platformName": "Android",
-      "deviceName": "329943c9",
-      "platformVersion": "12",
+      "deviceName": "emulator-5554",
+      "platformVersion" : "14",
       "automationName": "UIAutomator2",
-      "appPackage": "preprod.diksha.app",
+      "appPackage": "org.sunbird.app.staging",
       "appActivity": "org.sunbird.app.MainActivity",
       "newCommandTimeout": "9000",
       "autoGrantPermissions": "true",
@@ -18,8 +18,8 @@
     "name": "chrome",
     "caps": {
       "platformName": "Android",
-      "deviceName": "emulator-5554",
-      "platformVersion": "12",
+      "deviceName": "85e42ff9",
+      "platformVersion": "11",
       "automationName": "UIAutomator2",
       "appPackage": "com.android.chrome",
       "appActivity": "com.google.android.apps.chrome.Main",
