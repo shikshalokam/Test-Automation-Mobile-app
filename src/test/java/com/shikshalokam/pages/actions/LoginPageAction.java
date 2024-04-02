@@ -360,7 +360,7 @@ public class LoginPageAction {
     }
 
     public void clickOnReportsTile() throws Exception {
-    	ShikshaLokamClient.get().gestures().click(loginPageObjects.reportsTile);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(loginPageObjects.reportsTile);
     	Logger.logAndReportInfo("Clicked on the reports tile. ");
     }
 

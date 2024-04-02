@@ -192,6 +192,12 @@ public class ObservationPageObjects {
 
     @FindBy(xpath = "(//android.view.View[@resource-id='domainCard'])[2]")
     public WebElement secondDomain;
+    
+    @FindBy(xpath = "(//android.view.View[@resource-id='domainCard'])[3]")
+    public WebElement thirdDomain;
+    
+    @FindBy(xpath = "(//android.view.View[@resource-id='domainCard'])[4]")
+    public WebElement fourthDomain;
 
     @FindBy(xpath = "//android.view.View[@resource-id='domainCriteria']")
     public WebElement domainCriteria;
@@ -201,6 +207,12 @@ public class ObservationPageObjects {
 
     @FindBy(xpath = "(//android.view.View[@resource-id='domainCard'])[2]//(//android.widget.TextView[@text='Completed'])[2]")
     public WebElement domain2Completed;
+    
+    @FindBy(xpath = "(//android.view.View[@resource-id='domainCard'])[2]//(//android.widget.TextView[@text='Completed'])[3]")
+    public WebElement domain3Completed;
+    
+    @FindBy(xpath = "(//android.view.View[@resource-id='domainCard'])[2]//(//android.widget.TextView[@text='Completed'])[4]")
+    public WebElement domain4Completed;
 
     @FindBy(xpath = "(//android.view.View[@resource-id='domainCard'])[2]//android.widget.TextView[@text='Submitted']")
     public WebElement obsSubmittedStatusOnDomainCard;
@@ -318,8 +330,15 @@ public class ObservationPageObjects {
     public WebElement startObservationButton;
 
     @FindBy(xpath = "//android.view.View[@resource-id='pageDateTypeQuestion']//android.widget.Button[@text='Capture']")
-    public WebElement dateCaptureResponse;
-
+    public WebElement dateAutoCaptureResponse;
+    
+    @FindBy(xpath = "//android.view.View[@resource-id='pageDateTypeQuestion']//android.widget.EditText")
+    public WebElement dateTypeResponse;
+    
+    @FindBy(xpath = "(//android.widget.Button[contains(@text,'Monday')])[1]")
+    public WebElement dateMonday;
+    //(//android.widget.Button[contains(@text,'Monday')])[1]
+    
     @FindBy(xpath = "(//android.view.View[@resource-id='pageMultipleTypeQuestion']//android.widget.CheckBox[1])[2]")
     public WebElement checkboxResponse;
 
@@ -328,6 +347,10 @@ public class ObservationPageObjects {
 
     @FindBy(xpath = "//android.view.View[@resource-id='pageTextTypeQuestion']//android.widget.EditText")
     public WebElement textTypeResponse;
+    
+    @FindBy(xpath = " (//android.view.View[@resource-id=\"pageRadioTypeQuestion\"])[2]/android.view.View/android.widget.ListView/android.widget.RadioGroup/android.view.View[1]/android.view.View")
+    public WebElement radioButtonResponse2;
+   // (//android.view.View[@resource-id="pageRadioTypeQuestion"])[2]/android.view.View/android.widget.ListView/android.widget.RadioGroup/android.view.View[1]/android.view.View
 
     @FindBy(xpath = "//android.widget.Button[@text='Submit the form']")
     public WebElement submitForm;
@@ -343,6 +366,24 @@ public class ObservationPageObjects {
 
     @FindBy(xpath = "//android.widget.Button[@text='Reports']")
     public WebElement reportsButton;
+    
+    @FindBy(xpath = "//android.widget.Button[@text='Click here to improve']")
+    public WebElement clickHereToImptoveButton;
+    
+    @FindBy(xpath = "//android.widget.TextView[@text='Collaboration']")
+    public WebElement Collaboration ;
+    
+    @FindBy(xpath = "//android.widget.TextView[@text='Testing project one']")
+    public WebElement Testingprojectone ;
+
+
+
+  //android.widget.TextView[@text='Collaboration']
+  //android.widget.TextView[@text='Testing project one']
+
+  //android.widget.TextView[@text='Import Project']    POP up
+  //android.widget.Button[@text='Yes']
+  //android.widget.Button[@text='No']
 
 
 

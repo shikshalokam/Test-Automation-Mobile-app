@@ -9,7 +9,7 @@ public class ReportPageObjects {
 	/**  already declared in loginpage objects @FindBy(xpath = "//android.widget.Button[@text='Reports']")
 	 public MobileElement reportsTile; **/
 
-	 @FindBy(xpath="(//android.widget.TextView[contains(@text,'Observation Reports')])[1]")
+	 @FindBy(xpath="//android.widget.TextView[@resource-id='itemTitle' and @text='Observation reports']")
 	 public MobileElement ObservationReportsTile;
 
 	 @FindBy(xpath="(//android.widget.TextView[contains(@text,'Observation Reports')])[1]")
@@ -59,5 +59,8 @@ public class ReportPageObjects {
 
 	 @FindBy(xpath = "//android.widget.TextView[@text='Category overview']")
 	 public MobileElement categoryOverview;
-
+	 
+	 @FindBy(xpath = "//android.widget.TextView[@resource-id='itemTitle' and @text='Test observation with rubrics dec test 1']")
+	 public MobileElement ObsLedImpReport;
+	 
 }

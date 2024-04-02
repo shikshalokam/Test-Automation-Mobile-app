@@ -24,7 +24,7 @@ public class ReportPageActions {
     //******************Actions*********************************************************//
 
     public void clickOnObservationReportsTile() throws Exception {
-    	ShikshaLokamClient.get().gestures().click(reportPageObjects.ObservationReportsTile);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(reportPageObjects.ObservationReportsTile);
     	Logger.logAndReportInfo("Clicked on the observation reports tile.");
     }
 
@@ -57,6 +57,11 @@ public class ReportPageActions {
     public void clickOnImprovementReportsTile() throws Exception {
     	ShikshaLokamClient.get().gestures().click(reportPageObjects.ImprovementReportsTile);
     	Logger.logAndReportInfo("Clicked on the improvements reports tile.");
+    }
+    
+    public void clickOnObsLedImpReport() throws Exception {
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(reportPageObjects.ObsLedImpReport);
+    	Logger.logAndReportInfo("Clicked on Obs Led Imp report tile.");
     }
 
 

@@ -96,17 +96,17 @@ public class ObservationPageActions {
     	Thread.sleep(2000);
     }
 
-    public String searchObservation(String observationName) throws Exception{
+    public void searchObservation(String observationName) throws Exception{
     	ShikshaLokamClient.get().gestures().sendValueToTextBox(observationPageObjects.observationSearch, observationName);
     	Logger.logAndReportInfo("Searched observation is " + observationName);
     	Thread.sleep(2000);
-    	String displayedObserv = ShikshaLokamClient.get().gestures().getText(observationPageObjects.observationNameOnObseravtionsCard);
-    	return displayedObserv;
+    	//String displayedObserv = ShikshaLokamClient.get().gestures().getText(observationPageObjects.observationNameOnObseravtionsCard);
+    	//Logger.logAndReportInfo("Observation Name is " + displayedObserv);
     }
 
     public void clickOnFirstObservation() throws Exception {
-    	ShikshaLokamClient.get().gestures().waitForElementToAppear(observationPageObjects.firstObservation);
-    	ShikshaLokamClient.get().gestures().click(observationPageObjects.firstObservation);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.firstObservation);
+    	//ShikshaLokamClient.get().gestures().click(observationPageObjects.firstObservation);
     	Logger.logAndReportInfo("Clicked on the first observation.");
     }
 
@@ -141,9 +141,14 @@ public class ObservationPageActions {
     	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.startObservationButton);
     	Logger.logAndReportInfo("Clicked on Start Observation Button ");
     }
+    
+    public void clickOnReportsButton() throws Exception {
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.reportsButton);
+    	Logger.logAndReportInfo("Clicked on Reports Button ");
+    }
 
     public void completeObsWithoutRubric() throws Exception {
-    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.dateCaptureResponse);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.dateAutoCaptureResponse);
     	ShikshaLokamClient.get().gestures().click(observationPageObjects.checkboxResponse);
     	ShikshaLokamClient.get().gestures().click(observationPageObjects.nextButtonOnQuestionPage);
     	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.radioButtonResponse);
@@ -188,7 +193,94 @@ public class ObservationPageActions {
     	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.submitForm);
 
     }
+    
+    public void completeObsLedImpDomain1Questionnaires() throws Exception {
+    	ShikshaLokamClient.get().gestures().waitForElementToAppear(observationPageObjects.textTypeResponse);
+    	ShikshaLokamClient.get().gestures().sendValueToTextBox(observationPageObjects.textTypeResponse,"Stay disciplined and focused");
+    	Thread.sleep(2000);
+      	ShikshaLokamClient.get().gestures().swipeUp();
+      	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.radioButtonResponse);
+      	ShikshaLokamClient.get().gestures().swipeUp();
+      	ShikshaLokamClient.get().gestures().swipeUp();
+      	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.textTypeResponse);
+    	ShikshaLokamClient.get().gestures().typeNumber2();
+    	ShikshaLokamClient.get().gestures().swipeUp();
+    	ShikshaLokamClient.get().gestures().swipeUp();
+    	
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.radioButtonResponse);
+      	
+    	ShikshaLokamClient.get().gestures().click(observationPageObjects.saveButtonForQuestionaries);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.submitForm);
+    	
+    }
+    
+    public void completeObsLedImpDomain2Questionnaires() throws Exception {
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.radioButtonResponse);
+    	ShikshaLokamClient.get().gestures().swipeUp();
+    	//ShikshaLokamClient.get().gestures().swipeUp();
+    	Thread.sleep(1000);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.radioButtonResponse2);
+    	ShikshaLokamClient.get().gestures().swipeUp();
+    	Thread.sleep(1000);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.radioButtonResponse2);
+    	ShikshaLokamClient.get().gestures().swipeUp();
+    	ShikshaLokamClient.get().gestures().swipeUp();
+    	Thread.sleep(1000);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.dateTypeResponse);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.dateMonday);
+    	
+    	ShikshaLokamClient.get().gestures().click(observationPageObjects.nextButtonOnQuestionPage);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.checkboxResponse);
+    	ShikshaLokamClient.get().gestures().swipeUp();
+    	ShikshaLokamClient.get().gestures().swipeUp();
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.checkboxResponse);
+    	
+    	ShikshaLokamClient.get().gestures().click(observationPageObjects.saveButtonForQuestionaries);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.submitForm);
+    	
 
+    }
+    
+    public void completeObsLedImpDomain3Questionnaires() throws Exception {
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.radioButtonResponse);
+    	ShikshaLokamClient.get().gestures().swipeUp();
+    	ShikshaLokamClient.get().gestures().swipeUp();
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.radioButtonResponse);
+    	
+    	
+    	ShikshaLokamClient.get().gestures().click(observationPageObjects.saveButtonForQuestionaries);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.submitForm);
+    	
+    }
+    public void completeObsLedImpDomain4Questionnaires() throws Exception {
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.radioButtonResponse);
+    	ShikshaLokamClient.get().gestures().swipeUp();
+    	ShikshaLokamClient.get().gestures().swipeUp();
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.radioButtonResponse);
+    	
+    	
+    	ShikshaLokamClient.get().gestures().click(observationPageObjects.saveButtonForQuestionaries);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.submitForm);
+    	
+    }
+    
+    public void clickOnClickHereToImprove() throws Exception {
+    	Thread.sleep(2000);
+    	ShikshaLokamClient.get().gestures().swipeUp();
+    	ShikshaLokamClient.get().gestures().swipeUp();
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.clickHereToImptoveButton);
+    	
+    }
+    
+    public void clickOnCollaboration() throws Exception {
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.Collaboration);
+    	
+    }
+    
+    public void clickOnTestingprojectone() throws Exception {
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(observationPageObjects.Testingprojectone);
+    	
+    }
 
 
     // *****************************  Verify *****************************************//
@@ -263,6 +355,18 @@ public class ObservationPageActions {
     	ShikshaLokamClient.get().gestures().waitForElementToAppear(observationPageObjects.secondDomain);
         ShikshaLokamClient.get().gestures().click(observationPageObjects.secondDomain);
         Logger.logAndReportInfo("Clicked on the second domain.");
+    }
+    
+    public void clickOnThirdDomain() throws Exception {
+    	ShikshaLokamClient.get().gestures().waitForElementToAppear(observationPageObjects.thirdDomain);
+        ShikshaLokamClient.get().gestures().click(observationPageObjects.thirdDomain);
+        Logger.logAndReportInfo("Clicked on the third domain.");
+    }
+    
+    public void clickOnFourthDomain() throws Exception {
+    	ShikshaLokamClient.get().gestures().waitForElementToAppear(observationPageObjects.fourthDomain);
+        ShikshaLokamClient.get().gestures().click(observationPageObjects.fourthDomain);
+        Logger.logAndReportInfo("Clicked on the fourth domain.");
     }
 
     public void clickOnDomainCriteria() throws Exception {
@@ -501,6 +605,14 @@ public class ObservationPageActions {
     public void verifyDomain2CompletedStatus() throws Exception {
     	ShikshaLokamClient.get().gestures().waitForElementToAppear(observationPageObjects.domain2Completed);
     	Logger.logAndReportPass("Domain 2 Completed Successfully .");
+    }
+    public void verifyDomain3CompletedStatus() throws Exception {
+    	ShikshaLokamClient.get().gestures().waitForElementToAppear(observationPageObjects.domain2Completed);
+    	Logger.logAndReportPass("Domain 3 Completed Successfully .");
+    }
+    public void verifyDomain4CompletedStatus() throws Exception {
+    	ShikshaLokamClient.get().gestures().waitForElementToAppear(observationPageObjects.domain2Completed);
+    	Logger.logAndReportPass("Domain 4 Completed Successfully .");
     }
 
 

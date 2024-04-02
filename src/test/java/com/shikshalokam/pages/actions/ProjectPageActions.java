@@ -201,12 +201,12 @@ public class ProjectPageActions {
     }
 
     public void clickOnTaskDetails() throws Exception {
-    	ShikshaLokamClient.get().gestures().click(projectPageObjects.taskDetailsTab);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(projectPageObjects.taskDetailsTab);
     	Logger.logAndReportInfo("Clicked on the task details tab");
     }
 
     public void clickOnFirstTaskCard() throws Exception {
-    	ShikshaLokamClient.get().gestures().click(projectPageObjects.firstTaskCard);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(projectPageObjects.firstTaskCard);
     	Logger.logAndReportInfo("Clicked on first task");
     }
 
@@ -220,13 +220,18 @@ public class ProjectPageActions {
 
 
     public void clickOnSecondTaskCard() throws Exception {
-    	ShikshaLokamClient.get().gestures().click(projectPageObjects.secondTaskCard);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(projectPageObjects.secondTaskCard);
     	Logger.logAndReportInfo("Clicked on second task");
     }
 
     public void clickOnThirdTaskCard() throws Exception {
-    	ShikshaLokamClient.get().gestures().click(projectPageObjects.thirdTaskCard);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(projectPageObjects.thirdTaskCard);
     	Logger.logAndReportInfo("Clicked on third task");
+    }
+    
+    public void clickOnFourthTaskCard() throws Exception {
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(projectPageObjects.fourthTaskCard);
+    	Logger.logAndReportInfo("Clicked on fourth task");
     }
 
     public void clickOnSubtaskStatus() throws Exception {
@@ -236,7 +241,7 @@ public class ProjectPageActions {
 
 
     public void clickOnViewTaskDetails() throws Exception {
-    	ShikshaLokamClient.get().gestures().click(projectPageObjects.viewTaskDetails);
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(projectPageObjects.viewTaskDetails);
     	Logger.logAndReportInfo("Clicked on View task details ");
     }
 
@@ -282,6 +287,10 @@ public class ProjectPageActions {
     public void swipeUp() throws Exception {
     	 ShikshaLokamClient.get().gestures().swipeUp();
     }
+    
+    public void swipeDown() throws Exception {
+   	 ShikshaLokamClient.get().gestures().swipeDown();
+   }
 
     public void attachingTaskEvidences() throws Exception {
     	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(projectPageObjects.addfileButton);
@@ -339,6 +348,16 @@ public class ProjectPageActions {
     	ShikshaLokamClient.get().gestures().click(projectPageObjects.deleteButton);
     	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(projectPageObjects.deleteButtonOnPopup);
 
+    }
+    
+    public void verifyImportPopup() throws Exception {
+    	ShikshaLokamClient.get().gestures().waitForElementToAppear(projectPageObjects.importProjectPopup);
+    	Logger.logAndReportInfo("Import Pop-up shows up succesfully");
+    }
+    
+    public void clickOnYesButton() throws Exception {
+    	ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(projectPageObjects.yesButton);
+    	Logger.logAndReportInfo("clicked on Yes button on Import Pop up");
     }
 
 
@@ -513,7 +532,7 @@ public class ProjectPageActions {
     }
 
     public void verifySubmitImprovementOnAddRemarksScreen() throws Exception {
-    	ShikshaLokamClient.get().gestures().isDisplayed(projectPageObjects.submitImprovement);
+    	ShikshaLokamClient.get().gestures().waitForElementToAppear(projectPageObjects.submitImprovement);
     	ShikshaLokamClient.get().gestures().isEnabled(projectPageObjects.submitImprovement);
     	Logger.logAndReportPass("Submit improvement button is displayed and Enabled On Add remarks Screen.");
     }

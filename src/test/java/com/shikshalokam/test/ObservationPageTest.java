@@ -13,6 +13,7 @@ import com.shikshalokam.pages.actions.LoginPageAction;
 import com.shikshalokam.pages.actions.ObservationPageActions;
 import com.shikshalokam.pages.actions.ProgramsPageActions;
 import com.shikshalokam.pages.actions.ProjectPageActions;
+import com.shikshalokam.pages.actions.ReportPageActions;
 import com.shikshalokam.utils.gSheet.TestData;
 
 public class ObservationPageTest {
@@ -32,6 +33,9 @@ public class ObservationPageTest {
     }
     public ProjectPageActions getProjectPageActions() throws Exception {
     	return new ProjectPageActions();
+    }
+    public ReportPageActions getReportPageActions() throws Exception {
+    	return new ReportPageActions();
     }
 
     //@BeforeMethod
@@ -206,7 +210,14 @@ public class ObservationPageTest {
           getObservationPageActions().verifyAddEnitityPage();
     }
 
-    @Test(description = "" )
+    @Test(description = ">Verify join program pop up will appear when user clicks on default added (school/block/cluster/district/state) entity"
+    		+ ">Verify when user clicks on join program button, PII pop up will appear on the screen "
+    		+ ">Verify when user clicks on share /Do not Share button PII pop up will close ."
+    		+ ">Verify that the user see the list of domain after selecting Default Entity in 'observation with rubric Single Submission'"
+    		+ ">Verify user is able to view the observation questions with non editable form"
+    		+ ">Verify user is able to see start button at the bottom of the questionnaire page"
+    		+ ">Verify once user clicks on the start button, he/she is able to edit/fill the responses of the observation form"
+    		+ ">Verify user is able to fill the observation with rubric form & user can submit it" )
     @Author(name = "SHREEJITH")
     public void submitSingleSubmissionObsWithRubric() throws Exception {
     	  loginPageTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTest!J:K");
@@ -244,7 +255,15 @@ public class ObservationPageTest {
 
     }
 
-    @Test(description = "" )
+    @Test(description = ">Verify join program pop up will appear when user clicks on default added (school/block/cluster/district/state) entity"
+    		+ ">Verify when user clicks on join program button, PII pop up will appear on the screen "
+    		+ ">Verify when user clicks on share /Do not Share button PII pop up will close ."
+    		+ ">Verify that user can view submissions list"
+    		+ ">Verify that the user see the list of domain after selecting Default Entity in 'observation with rubric Multiple Submission'"
+    		+ ">Verify user is able to view the observation questions with non editable form"
+    		+ ">Verify user is able to see start button at the bottom of the questionnaire page"
+    		+ ">Verify once user clicks on the start button, he/she is able to edit/fill the responses of the observation form"
+    		+ ">Verify user is able to fill the observation with rubric form & user can submit it" )
     @Author(name = "SHREEJITH")
     public void submitMultipleSubmissionObsWithRubric() throws Exception {
     	  loginPageTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTest!J:K");
@@ -290,7 +309,15 @@ public class ObservationPageTest {
 
 
     }
-    @Test(description = "" )
+    
+    @Test(description = ">Verify join program pop up will appear when user clicks on default added (school/block/cluster/district/state) entity"
+    		+ ">Verify when user clicks on join program button, PII pop up will appear on the screen "
+    		+ ">Verify when user clicks on share /Do not Share button PII pop up will close ."
+    		+ ">Verify that user can view submissions list"
+    		+ ">Verify user is able to view the observation questions with non editable form"
+    		+ ">Verify user is able to see start button at the bottom of the questionnaire page"
+    		+ ">Verify once user clicks on the start button, he/she is able to edit/fill the responses of the observation form"
+    		+ ">Verify user is able to fill the observation with rubric form & user can submit it" )
     @Author(name = "SHREEJITH")
     public void submitObsWithoutRubric() throws Exception {
     	  loginPageTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTest!J:K");
@@ -322,4 +349,105 @@ public class ObservationPageTest {
           getObservationPageActions().verifyObservationInstance2IsCreated();
 
 
-}}
+}
+    @Test(description = "observation led imp flow" )
+    @Author(name = "SHREEJITH")
+    public void ObsLedImp() throws Exception {
+    	  loginPageTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTest!J:K");
+    	  getLoginPageActions().userOnBoardingAsHTOfficial();
+    	  getLoginPageActions().enterUserName(loginPageTestData.get("obsLedImpUser"));
+          getLoginPageActions().enterPassword(loginPageTestData.get("password4"));
+          getLoginPageActions().clickOnLoginButton();
+          
+          getObservationPageActions().clickOnObservationsTile();
+          Thread.sleep(2000);
+
+          observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
+          getObservationPageActions().searchObservation(observationPageTestData.get("ObsLedImp"));
+          
+          getObservationPageActions().clickOnFirstObservation();
+          getObservationPageActions().clickOnDefaultEntity(); 
+       
+          getProgramsPageActions().verifyJoinProgramPopUp();
+          getProgramsPageActions().clickOnJoinProgramButtonOnPopUp();
+          getProgramsPageActions().verifyPiiPopUp();
+          getProgramsPageActions().clickOnDoNotShareButtonOnPiiPopup();
+          getObservationPageActions().clickOnDefaultEntity();  
+          
+  
+          getObservationPageActions().verifyDomainsListingPage(); 
+          getObservationPageActions().clickOnFirstDomain();
+          getObservationPageActions().clickOnDomainCriteria();
+          getObservationPageActions().clickOnStartButton();
+          getObservationPageActions().completeObsLedImpDomain1Questionnaires();
+          getObservationPageActions().verifyDomain1CompletedStatus(); 
+          
+          getObservationPageActions().clickOnSecondDomain();
+          getObservationPageActions().clickOnDomainCriteria();
+          getObservationPageActions().clickOnStartButton();
+          getObservationPageActions().completeObsLedImpDomain2Questionnaires();
+          getObservationPageActions().verifyDomain2CompletedStatus(); 
+          
+          getObservationPageActions().clickOnThirdDomain();
+          getObservationPageActions().clickOnDomainCriteria();
+          getObservationPageActions().clickOnStartButton();
+          getObservationPageActions().completeObsLedImpDomain3Questionnaires();
+          getObservationPageActions().verifyDomain3CompletedStatus();  
+          
+          getObservationPageActions().clickOnFourthDomain();
+          getObservationPageActions().clickOnDomainCriteria();
+          getObservationPageActions().clickOnStartButton();
+          getObservationPageActions().completeObsLedImpDomain4Questionnaires();
+          getObservationPageActions().verifyDomain4CompletedStatus(); 
+          
+          getObservationPageActions().clickOnTopBackButton();
+          getObservationPageActions().clickOnTopBackButton();
+          getObservationPageActions().clickOnTopBackButton();  
+         
+          getLoginPageActions().clickOnReportsTile();
+          getReportPageActions().clickOnObservationReportsTile();
+          getReportPageActions().clickOnObsLedImpReport();
+          getObservationPageActions().clickOnClickHereToImprove();
+          
+          getObservationPageActions().clickOnCollaboration();
+          getObservationPageActions().clickOnTestingprojectone();
+            
+          getProjectPageActions().clickOnStartImprovement();
+          getProjectPageActions().verifyImportPopup();
+          getProjectPageActions().clickOnYesButton(); 
+          
+          getProjectPageActions().clickOnTaskDetails();
+          getProjectPageActions().clickOnFirstTaskCard();
+          getProjectPageActions().completeTask();
+          getProjectPageActions().clickOnBackButton();
+          getProjectPageActions().swipeUp();
+          getProjectPageActions().clickOnSecondTaskCard();
+          getProjectPageActions().completeTask();
+          getProjectPageActions().clickOnBackButton(); 
+          getProjectPageActions().swipeUp();
+          getProjectPageActions().clickOnLoadMoreTasks();
+          getProjectPageActions().clickOnThirdTaskCard();
+          getProjectPageActions().clickOnTaskStatusDropdown();
+          getProjectPageActions().selectCompletedStatus();
+          getProjectPageActions().clickOnOkButton();
+          getProjectPageActions().clickOnBackButton();
+          getProjectPageActions().swipeUp();
+          getProjectPageActions().clickOnFourthTaskCard();
+          getProjectPageActions().clickOnTaskStatusDropdown();
+          getProjectPageActions().selectCompletedStatus();
+          getProjectPageActions().clickOnOkButton();
+          getProjectPageActions().clickOnBackButton(); 
+          
+          getProjectPageActions().swipeDown();
+          getProjectPageActions().swipeDown();  
+          
+          getProjectPageActions().verifySubmitImprovement();
+          getProjectPageActions().clickOnSubmitImprovementButton();
+          getProjectPageActions().verifySubmitImprovementOnAddRemarksScreen();
+          getProjectPageActions().clickOnSubmitImprovementButton();
+          getProjectPageActions().verifySubmitImprovementPopUp();
+          getProjectPageActions().clickOnSubmitButton();
+          getProjectPageActions().verifyProjectSubmissionCompleted();
+                   
+    } 
+    }

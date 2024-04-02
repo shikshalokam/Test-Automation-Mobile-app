@@ -229,7 +229,7 @@ public class ProjectPageObjects {
      @FindBy(xpath = "//android.widget.TextView[@text='View task details']")
    	 public WebElement viewTaskDetails;
 
-     @FindBy(xpath = "//android.widget.Button[@resource-id='ion-sel-0']")
+     @FindBy(xpath = "(//android.widget.Button[@text='Not Started'])[1]")
    	 public WebElement statusDropdown;
 
      @FindBy(xpath = "//android.widget.RadioButton[@text='Completed']")
@@ -258,6 +258,9 @@ public class ProjectPageObjects {
 
     @FindBy(xpath = "(//android.view.View[@resource-id='taskCard'])[3]")
     public WebElement thirdTaskCard;
+    
+    @FindBy(xpath = "(//android.view.View[@resource-id='taskCard'])[4]")
+    public WebElement fourthTaskCard;
 
     @FindBy(xpath = "//android.view.View[@resource-id='sb-generic-toast']")
     public WebElement toastMsg;
@@ -337,6 +340,16 @@ public class ProjectPageObjects {
 
     @FindBy(xpath = "//android.widget.Button[@text='View reports']")
     public WebElement viewReportsButtonOnTaskCard;
+    
+    @FindBy(xpath = "//android.widget.TextView[@text='Import Project']")
+    public WebElement importProjectPopup;
+    
+    @FindBy(xpath = "//android.widget.Button[@text='Yes']")
+    public WebElement yesButton;
+    
+    
+    
+    //android.widget.TextView[@text='Import Project']
 
 
 
