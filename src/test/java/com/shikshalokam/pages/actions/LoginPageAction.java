@@ -43,7 +43,7 @@ public class LoginPageAction {
     }
 
     public void clickOnLoginButton() throws Exception {
-        ShikshaLokamClient.get().gestures().click(loginPageObjects.loginButton);
+        ShikshaLokamClient.get().gestures().waitAndClickElementisVisible(loginPageObjects.loginButton);
         Logger.logAndReportInfo("Clicked On Login Button.");
         Thread.sleep(10000);
     }

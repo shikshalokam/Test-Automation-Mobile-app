@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import com.shikshalokam.annotation.Author;
 import com.shikshalokam.client.ShikshaLokamClient;
+import com.shikshalokam.pages.actions.HomePageActions;
 import com.shikshalokam.pages.actions.LoginPageAction;
 import com.shikshalokam.pages.actions.ObservationPageActions;
 import com.shikshalokam.pages.actions.ProgramsPageActions;
@@ -37,6 +38,10 @@ public class ObservationPageTest {
     public ReportPageActions getReportPageActions() throws Exception {
     	return new ReportPageActions();
     }
+    
+    public HomePageActions getHomePageActions() throws Exception {
+        return new HomePageActions();
+	}
 
     //@BeforeMethod
     public void loginToTheApplication() throws Exception {
@@ -163,6 +168,21 @@ public class ObservationPageTest {
     	  getLoginPageActions().enterUserName(loginPageTestData.get("userHT"));
           getLoginPageActions().enterPassword(loginPageTestData.get("password"));
           getLoginPageActions().clickOnLoginButton();
+          getObservationPageActions().clickOnObservationsTile();
+          getObservationPageActions().verifyObservationListingPage();
+          getObservationPageActions().verifyObservationsCardContents();
+    }
+    
+    @Test(description = "-Verify that user with a specific role can access observation form targeted to the user or observation link opened by clicking on the observation tile on the homescreen" )
+    @Author(name = "SHREEJITH")
+    public void teacherObservationsListingPage() throws Exception {
+    	  loginPageTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTest!D:E");
+    	  getLoginPageActions().userOnBoardingAsHTOfficial();
+    	  getLoginPageActions().enterUserName(loginPageTestData.get("userTeacher"));
+          getLoginPageActions().enterPassword(loginPageTestData.get("passwordTeacher"));
+          getLoginPageActions().clickOnLoginButton();
+          getHomePageActions().navigatingToTeacherHomePage();
+          getHomePageActions().scrollToBrowseOtherCategories();
           getObservationPageActions().clickOnObservationsTile();
           getObservationPageActions().verifyObservationListingPage();
           getObservationPageActions().verifyObservationsCardContents();
